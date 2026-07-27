@@ -1,0 +1,10 @@
+# Redirects from old site URLs to new structure
+/about-us              /about         301
+/ap-assured            /ap-assure     301
+/resources             /blog          301
+/privacy-policy        /privacy       301
+/products              /solutions     301
+/request-demo          /demo          301
+/reqest-demo           /demo          301
+/soultions             /solutions     301
+/what-is-360-ap        /about         301

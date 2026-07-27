@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERP Integrations | SAP, Oracle NetSuite, Coupa, Dynamics 365 | 360° AP</title>
+  <meta name="description" content="Native ERP integration for accounts payable automation. Pre-built connectors for SAP, Oracle NetSuite, Coupa and Microsoft Dynamics 365. Connected in days, not months.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/cropped-AP_Favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/cropped-AP_Favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/cropped-AP_Favicon-180x180.png">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-P566L9TS');</script>
+  <!-- End Google Tag Manager -->
+  <style>
+    /* Integrations page specific styles */
+    .integrations-hero {
+      text-align: center;
+      padding: 80px 48px 100px;
+      background: linear-gradient(180deg, rgba(45, 212, 191, 0.08) 0%, #fff 45%);
+    }
+
+    .integrations-hero-content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .integrations-hero .section-label {
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    .integrations-hero h1 {
+      font-size: clamp(40px, 5vw, 56px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.15;
+      margin-bottom: 24px;
+      color: var(--text-primary);
+    }
+
+    .integrations-hero p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+    }
+
+    .integrations-hero .hero-cta {
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .integrations-hero .hero-cta-supporting {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .hero-erp-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      margin-top: 48px;
+    }
+
+    .hero-erp-logos img {
+      height: 36px;
+      width: auto;
+    }
+
+    /* ERP Cards Section */
+    .erp-cards-section {
+      padding: 100px 20px;
+      background: var(--bg-secondary);
+    }
+
+    .erp-cards-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .erp-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .erp-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 40px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .erp-card:hover {
+      border-color: var(--border);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .erp-card-logo {
+      height: 60px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+    }
+
+    .erp-card-logo img {
+      max-height: 60px;
+      max-width: 100%;
+      object-fit: contain;
+    }
+
+    .erp-card h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+
+    .erp-card p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+
+    /* How It Works Section */
+    .how-integration-section {
+      padding: 100px 20px;
+      background: var(--bg-secondary);
+    }
+
+    .how-integration-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .how-integration-text {
+      max-width: 900px;
+      margin: 60px auto;
+    }
+
+    .how-integration-text p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+
+    .how-integration-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .integration-timeline {
+      display: flex;
+      align-items: stretch;
+      margin-top: 60px;
+      position: relative;
+    }
+
+    .timeline-step {
+      flex: 1;
+      background: linear-gradient(135deg, #0F2830 0%, #134E4A 100%);
+      border: none;
+      border-radius: 12px;
+      padding: 32px 28px;
+      text-align: center;
+      position: relative;
+    }
+
+    .timeline-step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: rgba(255, 255, 255, 0.25);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .timeline-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      flex-shrink: 0;
+    }
+
+    .timeline-arrow svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--text-muted);
+    }
+
+    .timeline-step h4 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 12px;
+      margin-top: 0;
+    }
+
+    .timeline-step p {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 16px;
+    }
+
+    .timeline-duration {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 600;
+      color: #134E4A;
+      background: #fff;
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+
+    /* Info Cards Grid Section */
+    .info-cards-section {
+      padding: 100px 20px;
+      background: var(--bg-primary);
+    }
+
+    .info-cards-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .info-cards-section .section-header {
+      margin-bottom: 0;
+    }
+
+    .info-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .info-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 40px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .info-card:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .info-card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      background: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      color: var(--accent);
+    }
+
+    .info-card-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--accent);
+    }
+
+    .info-card-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .info-card h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+
+    .info-card p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      margin: 0;
+      flex-grow: 1;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .integrations-hero h1 {
+        font-size: clamp(40px, 5vw, 56px);
+      }
+
+      .erp-cards-grid {
+        gap: 30px;
+      }
+
+      .info-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+
+      .timeline-arrow {
+        width: 32px;
+      }
+
+      .timeline-arrow svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .integrations-hero {
+        padding: 80px 20px;
+      }
+
+      .integrations-hero h1 {
+        font-size: clamp(32px, 5vw, 44px);
+      }
+
+      .integrations-hero p {
+        font-size: 16px;
+      }
+
+      .erp-cards-section {
+        padding: 60px 20px;
+      }
+
+      .erp-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .erp-card {
+        padding: 32px;
+      }
+
+      .how-integration-section {
+        padding: 60px 20px;
+      }
+
+      .info-cards-section {
+        padding: 60px 20px;
+      }
+
+      .info-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .integration-timeline {
+        flex-direction: column;
+        gap: 0;
+        margin-top: 40px;
+      }
+
+      .timeline-step {
+        padding: 24px;
+      }
+
+      .timeline-arrow {
+        width: auto;
+        height: 32px;
+        transform: rotate(90deg);
+      }
+
+      .how-integration-text {
+        margin-top: 40px;
+      }
+
+      .hero-erp-logos {
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+
+      .hero-erp-logos img {
+        height: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P566L9TS"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"360° AP","alternateName":"360 AP","url":"https://360-ap.com","logo":"https://360-ap.com/images/logos/360ap-logo-dark.svg","sameAs":["https://www.linkedin.com/company/360%C2%B0-ap/"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://360-ap.com/"},{"@type":"ListItem","position":2,"name":"Integrations","item":"https://360-ap.com/integrations"}]}
+</script>
+
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="logo">
+        <img src="images/logos/360ap-logo-dark.svg" alt="360° AP">
+      </a>
+      <div class="nav-links">
+        <div class="nav-dropdown">
+          <a href="solutions.html">Solutions
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="solutions.html">Solutions Overview</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="ap-assure.html">
+              <img src="images/logos/ap-assured-logo-main.svg" alt=""> AP Assure
+            </a>
+            <a href="ap-accurate.html">
+              <img src="images/logos/ap-accurate-logo-main.svg" alt=""> AP Accurate
+            </a>
+            <a href="ap-automate.html">
+              <img src="images/logos/ap-automated-logo-main.svg" alt=""> AP Automate
+            </a>
+            <a href="ap-assist.html">
+              <img src="images/logos/ap-assist-logo-main.svg" alt=""> AP Assist
+            </a>
+            <a href="ap-analyze.html">
+              <img src="images/logos/ap-analyse-logo-main.svg" alt=""> AP Analyze
+            </a>
+          </div>
+        </div>
+        <a href="pricing.html">Pricing</a>
+        <a href="integrations.html">Integrations</a>
+        <a href="about.html">About Us</a>
+        <div class="nav-dropdown">
+          <a href="#">Resources
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="blog.html">Blog</a>
+            <a href="videos.html">Videos</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <a href="demo.html" class="btn-primary">Request a Demo</a>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Menu" onclick="document.querySelector('.mobile-menu').classList.toggle('active'); this.classList.toggle('active');">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="solutions.html">Solutions</a>
+    <a href="ap-assure.html" class="mobile-sub">AP Assure</a>
+    <a href="ap-accurate.html" class="mobile-sub">AP Accurate</a>
+    <a href="ap-automate.html" class="mobile-sub">AP Automate</a>
+    <a href="ap-assist.html" class="mobile-sub">AP Assist</a>
+    <a href="ap-analyze.html" class="mobile-sub">AP Analyze</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="integrations.html">Integrations</a>
+    <a href="about.html">About Us</a>
+    <a href="blog.html">Resources</a>
+    <a href="blog.html" class="mobile-sub">Blog</a>
+    <a href="videos.html" class="mobile-sub">Videos</a>
+    <a href="demo.html" class="btn-primary">Request a Demo</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="integrations-hero">
+    <div class="integrations-hero-content">
+      <span class="section-label">Integrations</span>
+      <h1>Native ERP integration. Minimal IT overhead.</h1>
+      <p>360° AP connects directly with your ERP. Real-time sync, pre-built connectors, and a setup process that takes days, not months. Your finance team runs the platform. Your IT team connects it and moves on.</p>
+      <div class="hero-cta">
+        <a href="demo.html" class="btn-primary btn-large">
+          Request a Demo
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+      <p class="hero-cta-supporting">See it with your own data. Free proof of concept included.</p>
+
+      <div class="hero-erp-logos">
+        <img src="images/erp-logos/sap.jpg" alt="SAP">
+        <img src="images/erp-logos/netsuite.png" alt="Oracle NetSuite">
+        <img src="images/erp-logos/coupa.png" alt="Coupa">
+        <img src="images/erp-logos/dynamics.jpg" alt="Microsoft Dynamics 365">
+      </div>
+    </div>
+  </section>
+
+  <!-- Supported ERPs Section -->
+  <section class="erp-cards-section">
+    <div class="erp-cards-container">
+      <div class="section-header">
+        <span class="section-label">Supported ERPs</span>
+        <h2>Pre-built connectors for the systems your team already uses</h2>
+      </div>
+      <div class="erp-cards-grid">
+        <div class="erp-card">
+          <div class="erp-card-logo">
+            <img src="images/erp-logos/sap.jpg" alt="SAP">
+          </div>
+          <h3>SAP</h3>
+          <p>Full integration with SAP environments, including SAP S/4HANA. 360° AP reads and writes directly to your SAP data, pulling vendor records, invoice history, and payment data in real time. Compatible with workflow tools like Process Director and OpenText VIM for approval routing.</p>
+        </div>
+
+        <div class="erp-card">
+          <div class="erp-card-logo">
+            <img src="images/erp-logos/netsuite.png" alt="Oracle NetSuite">
+          </div>
+          <h3>Oracle NetSuite</h3>
+          <p>Direct connectivity with Oracle NetSuite financial modules. Syncs AP data, vendor records, and transaction history without middleware. Supports multi-entity and multi-currency configurations out of the box.</p>
+        </div>
+
+        <div class="erp-card">
+          <div class="erp-card-logo">
+            <img src="images/erp-logos/coupa.png" alt="Coupa">
+          </div>
+          <h3>Coupa</h3>
+          <p>Integration with Coupa's procurement and AP modules. Invoice data, purchase orders, and supplier records flow between Coupa and 360° AP without manual intervention. Designed to complement your existing Coupa workflows, not replace them.</p>
+          <a href="https://marketplace.coupa.com/en-US/apps/786659" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--accent-dark); text-decoration: none; margin-top: 12px;">
+            View on Coupa Marketplace
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+
+        <div class="erp-card">
+          <div class="erp-card-logo">
+            <img src="images/erp-logos/dynamics.jpg" alt="Microsoft Dynamics 365">
+          </div>
+          <h3>Microsoft Dynamics 365</h3>
+          <p>Connects with Dynamics 365 Finance and Operations. Pull AP data, vendor records, and payment history directly into 360° AP for reconciliation, duplicate detection, and analytics across your Dynamics environment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How Integration Works Section -->
+  <section class="how-integration-section">
+    <div class="how-integration-container">
+      <div class="section-header">
+        <span class="section-label">How it works</span>
+        <h2>Connected in days, not months</h2>
+      </div>
+      <div class="how-integration-text">
+        <p>Your IT team handles the initial ERP connection using our pre-built connectors. Once connected, 360° AP syncs data in real time. There is no middleware to manage, no staging database to maintain, and no batch jobs running overnight. Data moves when it needs to move.</p>
+        <p>After setup, the finance team manages the platform day to day. IT involvement drops to near zero. If your ERP environment changes or you add a new entity, the connector adapts without a full re-implementation.</p>
+      </div>
+
+      <div class="integration-timeline">
+        <div class="timeline-step">
+          <div class="timeline-step-number">1</div>
+          <h4>Connector setup</h4>
+          <p>IT team configures the pre-built ERP connector</p>
+          <span class="timeline-duration">Days</span>
+        </div>
+        <div class="timeline-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-step-number">2</div>
+          <h4>Data sync validation</h4>
+          <p>Verify that AP data, vendor records, and transaction history flow correctly</p>
+          <span class="timeline-duration">Days</span>
+        </div>
+        <div class="timeline-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-step-number">3</div>
+          <h4>Go-live</h4>
+          <p>Finance team starts using the platform with live data</p>
+          <span class="timeline-duration">Within weeks</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Cards Grid Section -->
+  <section class="info-cards-section">
+    <div class="info-cards-container">
+      <div class="section-header">
+        <span class="section-label">Under the hood</span>
+        <h2>What flows through the connection</h2>
+      </div>
+      <div class="info-cards-grid">
+        <!-- Data Flow Card -->
+        <div class="info-card">
+          <div class="info-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+          <span class="info-card-label">Data flow</span>
+          <h3>What 360° AP pulls from your ERP</h3>
+          <p>Every module in the platform draws from the same ERP connection. There is no separate integration per module. Connect once, and all five modules have access to the data they need. Vendor master records, invoice data, credit notes, purchase orders, payment history, supplier statements, general ledger entries, and approval workflow status.</p>
+        </div>
+
+        <!-- Workflow Tools Card -->
+        <div class="info-card">
+          <div class="info-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg></div>
+          <span class="info-card-label">Workflow tools</span>
+          <h3>Works with your existing approval workflows</h3>
+          <p>360° AP integrates with workflow tools that sit on top of your ERP. If your approval routing runs through Process Director (SAP), OpenText VIM, or a similar tool, AP Automate routes extracted invoice data into those workflows directly. No duplicate data entry. No parallel approval chains.</p>
+        </div>
+
+        <!-- Security Card -->
+        <div class="info-card">
+          <div class="info-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 12 15 16 10"/></svg></div>
+          <span class="info-card-label">Security</span>
+          <h3>Enterprise-grade security as standard</h3>
+          <p>360° AP is cloud-native and built for enterprise environments. Data is encrypted in transit and at rest. Access controls are role-based. Audit trails cover every action across every module. The platform supports multi-entity, multi-currency, and multi-language configurations for organizations operating across regions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="cta">
+    <div class="cta-glow"></div>
+    <div class="cta-container">
+      <h2>See 360° AP connected to your ERP</h2>
+      <p>We'll set up a proof of concept with your actual ERP data. See how the integration works, how fast data syncs, and what your AP operation looks like in one platform. Free. No commitment.</p>
+      <div class="cta-buttons">
+        <a href="demo.html" class="btn-primary" style="display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; font-size: 16px;">
+          Request a Demo
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logos/360ap-logo-white.svg" alt="360° AP">
+          <p>One platform for your entire AP lifecycle. Built by AP practitioners who spent 15 years wishing it existed.</p>
+          <div class="footer-social" style="margin-top: 16px;">
+            <a href="https://www.linkedin.com/company/360%C2%B0-ap/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); transition: all 0.2s;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <a href="solutions.html">Solutions Overview</a>
+          <a href="ap-assure.html">AP Assure</a>
+          <a href="ap-accurate.html">AP Accurate</a>
+          <a href="ap-automate.html">AP Automate</a>
+          <a href="ap-assist.html">AP Assist</a>
+          <a href="ap-analyze.html">AP Analyze</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="integrations.html">Integrations</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Contact</h4>
+          <a href="contact.html">Contact Us</a>
+          <p><a href="mailto:sales@360-ap.com">sales@360-ap.com</a></p>
+
+          <a href="demo.html" class="btn-primary" style="margin-top: 16px;">Request a Demo</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 360° AP (Pty) Ltd. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="privacy.html#cookies">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accounts Payable Automation Software | 360° AP</title>
+  <meta name="description" content="One AP automation platform for reconciliation, duplicate detection, invoice processing, supplier queries and analytics. Five modules. One login. Free proof of concept. Statement reconciliation, ap assurance, ap assured, supplier statement reconciliation">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/cropped-AP_Favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/cropped-AP_Favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/cropped-AP_Favicon-180x180.png">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-P566L9TS');</script>
+  <!-- End Google Tag Manager -->
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P566L9TS"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"360° AP","alternateName":"360 AP","url":"https://360-ap.com","logo":"https://360-ap.com/images/logos/360ap-logo-dark.svg","sameAs":["https://www.linkedin.com/company/360%C2%B0-ap/"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"360° AP","alternateName":"360 AP","legalName":"360° AP (Pty) Ltd","url":"https://360-ap.com","logo":"https://360-ap.com/images/logos/360ap-logo-dark.svg","description":"AI-powered accounts payable automation platform with five integrated modules covering duplicate detection, supplier statement reconciliation, invoice processing, supplier query management, and cross-module analytics. One platform, one login, one shared data layer. Built by AP practitioners with over 15 years of experience.","slogan":"Your AP team juggles five tools. We built one.","foundingDate":"2024","founder":{"@type":"Person","name":"Werner van Dalen","jobTitle":"Co-Founder"},"telephone":"+27823373168","email":"sales@360-ap.com","address":{"@type":"PostalAddress","streetAddress":"2 Neptune House, Marina Bay","addressLocality":"Gibraltar","postalCode":"GX11 1AA","addressCountry":"GI"},"areaServed":{"@type":"Place","name":"Worldwide"},"knowsAbout":["Accounts payable automation","Duplicate payment detection","Supplier statement reconciliation","Intelligent document processing","Invoice processing automation","Agentic AI for finance","Supplier query management","AP analytics and business intelligence","SAP integration","Oracle NetSuite integration","Coupa integration","Microsoft Dynamics 365 integration"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"360° AP Platform Modules","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"AP Assure","description":"Duplicate payment detection and prevention.","url":"https://360-ap.com/ap-assure"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AP Accurate","description":"Supplier statement reconciliation.","url":"https://360-ap.com/ap-accurate"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AP Automate","description":"Invoice and credit note processing.","url":"https://360-ap.com/ap-automate"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AP Assist","description":"Agentic AI supplier query management.","url":"https://360-ap.com/ap-assist"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AP Analyze","description":"Real-time BI dashboards and cross-module analytics.","url":"https://360-ap.com/ap-analyze"}}]},"contactPoint":{"@type":"ContactPoint","contactType":"sales","telephone":"+27823373168","email":"sales@360-ap.com","url":"https://360-ap.com/contact"},"sameAs":["https://www.linkedin.com/company/360%C2%B0-ap/"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"360° AP","alternateName":"360 AP","url":"https://360-ap.com"}
+</script>
+
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Navigation -->
+ <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="logo">
+        <img src="images/logos/360ap-logo-dark.svg" alt="360° AP">
+      </a>
+      <div class="nav-links">
+        <div class="nav-dropdown">
+          <a href="solutions.html">Solutions
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="solutions.html">Solutions Overview</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="ap-assure.html">
+              <img src="images/logos/ap-assured-logo-main.svg" alt=""> AP-Assure
+            </a>
+            <a href="ap-accurate.html">
+              <img src="images/logos/ap-accurate-logo-main.svg" alt=""> AP-Accurate
+            </a>
+            <a href="ap-automated.html">
+              <img src="images/logos/ap-automated-logo-main.svg" alt=""> AP-Automated
+            </a>
+            <a href="ap-assist.html">
+              <img src="images/logos/ap-assist-logo-main.svg" alt=""> AP-Assist
+            </a>
+            <a href="ap-analyze.html">
+              <img src="images/logos/ap-analyse-logo-main.svg" alt=""> AP-Analyse
+            </a>
+          </div>
+        </div>
+        <a href="pricing.html">Pricing</a>
+        <a href="integrations.html">Integrations</a>
+        <a href="about.html">About Us</a>
+        <div class="nav-dropdown">
+          <a href="#">Resources
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="blog.html">Blog</a>
+            <a href="videos.html">Videos</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <a href="demo.html" class="btn-primary">Request a Demo</a>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Menu" onclick="document.querySelector('.mobile-menu').classList.toggle('active'); this.classList.toggle('active');">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="solutions.html">Solutions</a>
+    <a href="ap-assure.html" class="mobile-sub">AP Assure</a>
+    <a href="ap-accurate.html" class="mobile-sub">AP Accurate</a>
+    <a href="ap-automate.html" class="mobile-sub">AP Automate</a>
+    <a href="ap-assist.html" class="mobile-sub">AP Assist</a>
+    <a href="ap-analyze.html" class="mobile-sub">AP Analyze</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="integrations.html">Integrations</a>
+    <a href="about.html">About Us</a>
+    <a href="blog.html">Resources</a>
+    <a href="blog.html" class="mobile-sub">Blog</a>
+    <a href="videos.html" class="mobile-sub">Videos</a>
+    <a href="demo.html" class="btn-primary">Request a Demo</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-glow-2"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+          Built by AP Practitioners
+        </div>
+        <h1>Your AP team juggles five tools. <span style="white-space: nowrap;">We built one.</span></h1>
+        <p class="hero-description">Process statements in hours, catch duplicates before they cost you, and let AI handle your supplier queries. All from one platform your team logs into once.</p>
+        <div class="hero-cta">
+          <a href="demo.html" class="btn-primary btn-large">
+            Request a Demo
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+        <p class="hero-cta-supporting">See it with your own data. Free proof of concept included.</p>
+      </div>
+
+      <div class="hero-visual">
+       <style>
+          .orbit-visual {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1;
+            max-width: 520px;
+            margin: 0 auto;
+          }
+
+          /* Orbit rings */
+          .orbit-ring {
+            position: absolute;
+            border: 1px solid rgba(45, 212, 191, 0.15);
+            border-radius: 50%;
+          }
+
+          .orbit-ring-1 {
+            width: 70%;
+            height: 70%;
+            top: 15%;
+            left: 15%;
+          }
+
+          .orbit-ring-2 {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-color: rgba(45, 212, 191, 0.08);
+          }
+
+          /* Subtle pulsing dots on rings */
+          .orbit-dot {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+            opacity: 0.3;
+          }
+
+          .orbit-dot-1 { top: 14.5%; left: 50%; animation: pulse 3s ease-in-out infinite; }
+          .orbit-dot-2 { top: 50%; right: -0.5%; animation: pulse 3s ease-in-out infinite 0.5s; }
+          .orbit-dot-3 { bottom: 14.5%; left: 25%; animation: pulse 3s ease-in-out infinite 1s; }
+          .orbit-dot-4 { top: 35%; left: -0.5%; animation: pulse 3s ease-in-out infinite 1.5s; }
+
+          @keyframes pulse {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.5); }
+          }
+
+          /* Centre hub */
+          .orbit-centre {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #0F2830 0%, #134E4A 100%);
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 60px rgba(15, 40, 48, 0.3), 0 0 0 1px rgba(45, 212, 191, 0.1);
+            z-index: 3;
+          }
+
+          .orbit-centre img {
+            width: 72px;
+            height: auto;
+            filter: brightness(0) invert(1);
+          }
+
+          /* Connection lines from centre to logos */
+          .orbit-connections {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+          }
+
+          .orbit-connections line {
+            stroke: rgba(45, 212, 191, 0.12);
+            stroke-width: 1;
+            stroke-dasharray: 4, 4;
+          }
+
+          /* Product logo nodes */
+          .orbit-node {
+            position: absolute;
+            width: 110px;
+            height: 110px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+            z-index: 2;
+            transition: all 0.3s ease;
+          }
+
+          .orbit-node:hover {
+            transform: scale(1.08);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+          }
+
+          .orbit-node img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+          }
+
+          /* Positions: 5 logos spread around the circle */
+          .orbit-node-1 { top: -6%; left: 50%; transform: translateX(-50%); } /* top */
+          .orbit-node-2 { top: 22%; right: -4%; } /* top-right */
+          .orbit-node-3 { bottom: 14%; right: 15%; } /* bottom-right */
+          .orbit-node-4 { bottom: 14%; left: 15%; } /* bottom-left */
+          .orbit-node-5 { top: 22%; left: -4%; } /* top-left */
+
+          .orbit-node-1:hover { transform: translateX(-50%) scale(1.08); }
+		  
+		  .orbit-node-2:hover + .orbit-badge-3 {visibility: hidden;}
+		  
+
+          /* Static notification badges */
+          .orbit-badge {
+            position: absolute;
+            background: #fff;
+            border-radius: 10px;
+            padding: 10px 14px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 4;
+            white-space: nowrap;
+          }
+
+          .orbit-badge-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+          }
+
+          .orbit-badge-icon svg {
+            width: 15px;
+            height: 15px;
+          }
+
+          .orbit-badge-text strong {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-primary);
+          }
+
+          .orbit-badge-text span {
+            font-size: 10px;
+            color: var(--text-muted);
+          }
+
+          .orbit-badge-1 {
+            bottom: 70%;
+            right: 30%;
+          }
+
+          .orbit-badge-1 .orbit-badge-icon {
+            background: rgba(158, 208, 57, 0.12);
+            color: var(--assured-green);
+          }
+
+          .orbit-badge-2 {
+            top: 50%;
+            left: -15%;
+            transform: translateY(-50%);
+          }
+
+          .orbit-badge-2 .orbit-badge-icon {
+            background: rgba(59, 130, 246, 0.12);
+            color: var(--accurate-blue);
+          }
+
+          .orbit-badge-3 {
+            bottom: 70%;
+            right: 30%;
+          }
+
+          .orbit-badge-3 .orbit-badge-icon {
+            background: rgba(249, 115, 22, 0.12);
+            color: var(--automated-orange);
+          }
+		  
+		     .orbit-badge-4 {
+            bottom: 43%;
+            right: -15%;
+          }
+
+          .orbit-badge-4 .orbit-badge-icon {
+            background: rgba(249, 115, 22, 0.12);
+            color: var(--automated-orange);
+          }
+		  
+		  	     .orbit-badge-5 {
+            bottom: 0%;
+            right: 55%;
+          }
+
+          .orbit-badge-5 .orbit-badge-icon {
+            background: rgba(249, 115, 22, 0.12);
+            color: var(--automated-orange);
+          }
+		  
+			.orbit-badge-6 {
+            bottom: 0%;
+            right: 5%;
+          }
+
+          .orbit-badge-6 .orbit-badge-icon {
+            background: rgba(249, 115, 22, 0.12);
+            color: var(--automated-orange);
+          }
+		  
+		 .orbit-node-2:hover > .orbit-badge-3 {Visibility:visible;  }
+.hide {
+  display: none;
+}
+
+.myDIV:hover + .hide {
+  display: block;
+  color: red;
+}
+          @media (max-width: 768px) {
+            .orbit-visual {
+              max-width: 360px;
+            }
+
+            .orbit-node {
+              width: 76px;
+              height: 76px;
+              border-radius: 16px;
+            }
+
+            .orbit-node img {
+              width: 48px;
+              height: 48px;
+            }
+
+            .orbit-centre {
+              width: 88px;
+              height: 88px;
+              border-radius: 20px;
+            }
+
+            .orbit-centre img {
+              width: 52px;
+            }
+
+            .orbit-badge {
+              display: none;
+            }
+          }
+        </style>
+
+  <div class="orbit-visual">
+          <!-- Orbit rings -->
+          <div class="orbit-ring orbit-ring-1"></div>
+          <div class="orbit-ring orbit-ring-2">
+            <div class="orbit-dot orbit-dot-1"></div>
+            <div class="orbit-dot orbit-dot-2"></div>
+            <div class="orbit-dot orbit-dot-3"></div>
+            <div class="orbit-dot orbit-dot-4"></div>
+          </div>
+
+          <!-- Connection lines -->
+          <svg class="orbit-connections" viewBox="0 0 520 520">
+            <line x1="260" y1="260" x2="260" y2="46" />
+            <line x1="260" y1="260" x2="470" y2="180" />
+            <line x1="260" y1="260" x2="430" y2="400" />
+            <line x1="260" y1="260" x2="80" y2="400" />
+            <line x1="260" y1="260" x2="46" y2="180" />
+          </svg>
+
+          <!-- Centre hub -->
+          <div class="orbit-centre">
+            <img src="images/logos/360ap-logo-white.svg" alt="360° AP">
+          </div>
+
+          <!-- Product logo nodes -->
+          <div class="orbit-node orbit-node-1" >
+            <img src="images/logos/ap-assured-logo-main.svg" alt="AP-Assure">
+          </div>
+          <div class="orbit-node orbit-node-5">
+            <img src="images/logos/ap-accurate-logo-main.svg" alt="AP-Accurate">
+          </div>
+          <div class="orbit-node orbit-node-2">
+            <img src="images/logos/ap-automated-logo-main.svg" alt="AP-Automated">
+          </div>
+          <div class="orbit-node orbit-node-4">
+            <img src="images/logos/ap-assist-logo-main.svg" alt="AP-Assist">
+          </div>
+          <div class="orbit-node orbit-node-3">
+            <img src="images/logos/ap-analyse-logo-main.svg" alt="AP-Analyse">
+          </div>
+
+          <!-- Static notification badges -->
+          <div  class="orbit-badge orbit-badge-3 " >
+            <div class="orbit-badge-icon">
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="orbit-badge-text">
+              <strong>Duplicates Blocked</strong>
+              <span>Invoice #INV-2847 flagged</span>
+            </div>
+          </div>
+
+          <div class="orbit-badge orbit-badge-2">
+            <div class="orbit-badge-icon">
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="orbit-badge-text">
+              <strong>Statements Matched</strong>
+              <span>142 of 145 lines reconciled</span>
+            </div>
+          </div>
+
+          <div class="orbit-badge orbit-badge-4">
+            <div class="orbit-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div class="orbit-badge-text">
+              <strong>Invoices Processed</strong>
+              <span>PDF extracted in 4 seconds</span>
+            </div>
+          </div>
+		  
+          <div class="orbit-badge orbit-badge-5">
+            <div class="orbit-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div class="orbit-badge-text">
+              <strong>AI Insights</strong>
+              <span>Questions answered in realtime</span>
+            </div>
+          </div>
+		  
+		            <div class="orbit-badge orbit-badge-6">
+            <div class="orbit-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div class="orbit-badge-text">
+              <strong>BI reporting</strong>
+              <span>Powerful Dynamic Reporting</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Statement -->
+  <section class="challenges">
+    <div class="challenges-container">
+      <div class="section-header">
+        <span class="section-label">The reality</span>
+        <h2>Your AP process is held together with workarounds</h2>
+      </div>
+      <div class="challenges-text">
+        <p>Your finance team runs reconciliation in one tool, duplicate detection in another, and invoices through a third. None of them talk to each other. Reporting means exporting data from three places and stitching it together in a spreadsheet. Month-end is a scramble. Duplicates slip through. Supplier queries pile up in inboxes with no tracking.</p>
+        <p>You already know this. So do we. It's why we built 360° AP.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Module Overview -->
+  <section class="solutions" id="solutions">
+    <div class="solutions-container">
+      <div class="section-header">
+        <span class="section-label">Modules</span>
+        <h2>Five modules. One login. Everything connected.</h2>
+      </div>
+      <div class="solutions-grid-5">
+        <!-- AP Assure -->
+        <div class="solution-card assured">
+          <img src="images/logos/ap-assured-logo-main.svg" alt="AP Assure" class="solution-logo">
+          <p>Catches duplicates across multiple dimensions, including near-matches where key details differ slightly. Flags them before they cost you.</p>
+          <div class="solution-screenshot">
+            <img src="images/screenshots/ap-assured-duplicate-detection.png" alt="AP Assure duplicate detection view showing flagged duplicates with claim and drop actions">
+          </div>
+          <a href="ap-assure.html" class="solution-link">
+            Learn more
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- AP Accurate -->
+        <div class="solution-card accurate">
+          <img src="images/logos/ap-accurate-logo-main.svg" alt="AP Accurate" class="solution-logo">
+          <p>Imports statements in any format, matches them against your ERP data, and flags discrepancies. Turns a multi-day process into hours.</p>
+          <div class="solution-screenshot">
+            <img src="images/screenshots/ap-accurate-statement-reconciliation-detail.png" alt="AP Accurate reconciliation detail showing matched and unmatched lines">
+          </div>
+          <a href="ap-accurate.html" class="solution-link">
+            Learn more
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- AP Automate -->
+        <div class="solution-card automated">
+          <img src="images/logos/ap-automated-logo-main.svg" alt="AP Automate" class="solution-logo">
+          <p>Extracts data from PDFs, Excel files, and CSVs with up to 99%+ accuracy using intelligent document processing. Documents processed in minutes, not days.</p>
+          <div class="solution-screenshot">
+            <img src="images/screenshots/ap-automated-invoice-management.jpg" alt="AP Automate invoice management and processing view">
+          </div>
+          <a href="ap-automate.html" class="solution-link">
+            Learn more
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- AP Assist -->
+        <div class="solution-card assist">
+          <img src="images/logos/ap-assist-logo-main.svg" alt="AP Assist" class="solution-logo">
+          <p>An AI agent that queries your ERP, pulls from reconciled statements and duplicate records, and resolves supplier queries autonomously. Your team handles exceptions. AP Assist handles the rest.</p>
+          <div class="solution-screenshot">
+            <img src="images/screenshots/ap-assist-reconciliation-overview-dashboard.png" alt="AP Assist AI chat panel alongside reconciliation dashboard">
+          </div>
+          <a href="ap-assist.html" class="solution-link">
+            Learn more
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- AP Analyze -->
+        <div class="solution-card analyse">
+          <img src="images/logos/ap-analyse-logo-main.svg" alt="AP Analyze" class="solution-logo">
+          <p>Pull data from every module and your ERP into one view. KPI tracking, trend analysis, customizable reports, and automated alerts. No more siloed reporting.</p>
+          <div class="solution-screenshot">
+            <img src="images/screenshots/ap-analyze-bi-dashboard.png" alt="AP Analyze BI dashboard showing gauge charts and supplier breakdown">
+          </div>
+          <a href="ap-analyze.html" class="solution-link">
+            Learn more
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Differentiators -->
+  <section class="why-choose" id="why-choose">
+    <div class="why-choose-container">
+      <div class="section-header">
+        <span class="section-label">Why 360° AP</span>
+        <h2>One platform. Not five tools patched together.</h2>
+      </div>
+      <div class="why-choose-grid">
+        <div class="why-choose-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <h3>Everything shares one data layer</h3>
+          <p>Most AP solutions solve one problem well and force you to bolt together separate products for the rest. 360° AP covers the full lifecycle in a single application. Duplicate detection informs reconciliation. Query patterns feed analytics. Nothing lives in a silo.</p>
+        </div>
+        <div class="why-choose-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3>AI that does the work, not just the analysis</h3>
+          <p>Intelligent document processing turns statements and invoices into structured data in minutes with up to 99%+ accuracy. AP Assist resolves supplier queries by pulling live data from your ERP and AP records. This is automation that takes action, not a chatbot sitting on top of a dashboard.</p>
+        </div>
+        <div class="why-choose-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <line x1="3" y1="9" x2="21" y2="9"/>
+              <line x1="9" y1="21" x2="9" y2="9"/>
+            </svg>
+          </div>
+          <h3>Start with one module, expand when ready</h3>
+          <p>Pick the module that solves your most pressing problem. Everything is already connected. A proof of concept for reconciliation naturally shows you what duplicate detection and analytics can do. No extra setup. No extra cost to explore.</p>
+        </div>
+        <div class="why-choose-card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <h3>Free implementation. Free proof of concept.</h3>
+          <p>No professional services fees to get started. No demo with sample data. We run the proof of concept with your actual AP data so you see real results before you commit to anything.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="stats-bar">
+    <div class="stats-container">
+      <div class="stat-item">
+        <div class="stat-value">99<span>%+</span></div>
+        <div class="stat-label">Document processing and data extraction accuracy</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">Minutes</div>
+        <div class="stat-label">Not days. Statement and invoice processing turnaround</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">5<span>-in-1</span></div>
+        <div class="stat-label">Five modules, one login. One shared data layer</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">95<span>%+</span></div>
+        <div class="stat-label">Target autonomous resolution rate for supplier queries (AP Assist)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Integration Logo Bar -->
+  <section class="logo-bar">
+    <div class="logo-bar-container">
+      <p>Integrations</p>
+      <div class="logo-grid">
+        <img src="images/erp-logos/sap.jpg" alt="SAP" class="erp-logo-img">
+        <img src="images/erp-logos/netsuite.png" alt="Oracle NetSuite" class="erp-logo-img">
+        <img src="images/erp-logos/coupa.png" alt="Coupa" class="erp-logo-img">
+        <img src="images/erp-logos/dynamics.jpg" alt="Microsoft Dynamics 365" class="erp-logo-img">
+      </div>
+      <p class="logo-bar-supporting">Native ERP integration. Real-time sync. Minimal IT resources required to get live.</p>
+      <a href="integrations.html" class="logo-bar-link">
+        View integrations
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Built by Practitioners -->
+  <section class="practitioners">
+    <div class="practitioners-container">
+      <div class="practitioners-content">
+        <span class="section-label">The team</span>
+        <h2>Built by the people who've been in your AP department</h2>
+        <p>We spent over 15 years implementing AP solutions, running recovery audits, and consulting with finance teams across industries. The tools you're probably using now? We've tested most of them. We know where they fall short. 360° AP is what we built when we decided to stop working around the problems and start solving them properly.</p>
+        <a href="about.html" class="text-link">
+          About us
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+      <div class="practitioners-visual">
+        <div class="practitioners-stats">
+          <div class="practitioner-stat">
+            <div class="practitioner-stat-value">15<span>+</span></div>
+            <div class="practitioner-stat-label">Years in AP consulting</div>
+          </div>
+          <div class="practitioner-stat">
+            <div class="practitioner-stat-value">200<span>+</span></div>
+            <div class="practitioner-stat-label">Organisations we've worked with across industries</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="cta">
+    <div class="cta-glow"></div>
+    <div class="cta-container">
+      <h2>See what your AP data actually looks like in one place</h2>
+      <p>Run a free proof of concept with your own statements, invoices, and ERP data. No cost. No commitment. Just your data, working.</p>
+      <div class="cta-buttons">
+        <a href="demo.html" class="btn-primary" style="display: inline-flex; align-items: center; gap: 8px; padding: 16px 32px; font-size: 16px;">
+          Request a Free POC
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logos/360ap-logo-white.svg" alt="360° AP">
+          <p>One platform for your entire AP lifecycle. Built by AP practitioners who spent 15 years wishing it existed.</p>
+          <div class="footer-social" style="margin-top: 16px;">
+            <a href="https://www.linkedin.com/company/360%C2%B0-ap/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); transition: all 0.2s;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <a href="solutions.html">Solutions Overview</a>
+          <a href="ap-assure.html">AP Assure</a>
+          <a href="ap-accurate.html">AP Accurate</a>
+          <a href="ap-automate.html">AP Automate</a>
+          <a href="ap-assist.html">AP Assist</a>
+          <a href="ap-analyze.html">AP Analyze</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="integrations.html">Integrations</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Contact</h4>
+          <a href="contact.html">Contact Us</a>
+          <p><a href="mailto:sales@360-ap.com">sales@360-ap.com</a></p>
+         
+          <a href="demo.html" class="btn-primary" style="margin-top: 16px;">Request a Demo</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 360° AP (Pty) Ltd. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="privacy.html#cookies">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

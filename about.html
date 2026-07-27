@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About 360° AP | Built by AP Practitioners With 15+ Years Experience</title>
+  <meta name="description" content="We spent 15 years implementing AP solutions and running recovery audits. Then we built the platform we always wanted. Free implementation. Free proof of concept. Your partner, not your vendor.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/cropped-AP_Favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/cropped-AP_Favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/cropped-AP_Favicon-180x180.png">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-P566L9TS');</script>
+  <!-- End Google Tag Manager -->
+  <style>
+    /* Hero Section */
+    .about-hero {
+      padding: 80px 48px 60px;
+      background: linear-gradient(180deg, rgba(45, 212, 191, 0.08) 0%, var(--bg-primary) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-hero .section-label {
+      display: inline-block;
+      margin-bottom: 24px;
+    }
+
+    .about-hero h1 {
+      font-size: clamp(40px, 5vw, 56px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.15;
+      color: var(--text-primary);
+      margin-bottom: 24px;
+    }
+
+    .about-hero p {
+      font-size: 18px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    /* Stats Bar */
+    .about-stats-bar {
+      padding: 60px 48px;
+      background: var(--dark-bg-gradient);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-stats-bar::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1000px;
+      height: 400px;
+      background: radial-gradient(ellipse, rgba(45, 212, 191, 0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .about-stats-container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+      position: relative;
+    }
+
+    .about-stat-item {
+      text-align: center;
+    }
+
+    .about-stat-value {
+      font-size: clamp(22px, 2.5vw, 28px);
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .about-stat-label {
+      font-size: 15px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.5;
+    }
+
+    /* Story Timeline Section */
+    .story-section {
+      padding: 80px 48px;
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+    }
+
+    .story-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .story-section .section-label {
+      display: inline-block;
+      margin-bottom: 24px;
+    }
+
+    .story-section h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.2;
+      color: var(--text-primary);
+      margin-bottom: 64px;
+    }
+
+    .story-timeline {
+      position: relative;
+      padding-left: 40px;
+    }
+
+    .story-timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--accent);
+    }
+
+    .story-card {
+      margin-bottom: 48px;
+      position: relative;
+      padding-bottom: 24px;
+    }
+
+    .story-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .story-card::before {
+      content: '';
+      position: absolute;
+      left: -46px;
+      top: 0;
+      width: 12px;
+      height: 12px;
+      background: var(--accent);
+      border-radius: 50%;
+      border: 3px solid var(--bg-secondary);
+      box-sizing: border-box;
+    }
+
+    .story-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--accent-dark);
+      margin-bottom: 8px;
+    }
+
+    .story-card p {
+      font-size: 16px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    /* Your Partner Section */
+    .partner-section {
+      padding: 80px 48px;
+      background: var(--dark-bg);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .partner-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .partner-section .section-label {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: var(--accent);
+    }
+
+    .partner-section h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.2;
+      color: #fff;
+      margin-bottom: 48px;
+    }
+
+    .partner-intro {
+      margin-bottom: 60px;
+    }
+
+    .partner-intro p {
+      font-size: 16px;
+      color: #E4E4E7;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .partner-intro p:last-child {
+      margin-bottom: 0;
+    }
+
+    .partner-highlights {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-bottom: 48px;
+    }
+
+    .partner-highlight-card {
+      padding: 32px;
+      background: rgba(45, 212, 191, 0.05);
+      border: 1px solid rgba(45, 212, 191, 0.2);
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .partner-highlight-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(45, 212, 191, 0.15);
+      border-radius: 14px;
+    }
+
+    .partner-highlight-icon svg {
+      width: 28px;
+      height: 28px;
+      stroke: var(--accent);
+    }
+
+    .partner-highlight-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .partner-highlight-card p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .partner-closing {
+      font-size: 16px;
+      color: #E4E4E7;
+      line-height: 1.8;
+    }
+
+    /* Screenshot Carousel (matches solution pages) */
+    .about-screenshot-section {
+      padding: 80px 48px 80px;
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+    }
+
+    .about-screenshot-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-screenshot-section .section-label {
+      display: inline-block;
+      margin-bottom: 24px;
+    }
+
+    .about-screenshot-section h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.2;
+      color: var(--text-primary);
+      margin-bottom: 48px;
+    }
+
+    /* Values Section with Grid Cards */
+    .values-section {
+      padding: 80px 48px;
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+    }
+
+    .values-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .values-section .section-label {
+      display: inline-block;
+      margin-bottom: 24px;
+    }
+
+    .values-section h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.2;
+      color: var(--text-primary);
+      margin-bottom: 64px;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+
+    .value-card {
+      padding: 40px;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .value-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 20px 40px rgba(45, 212, 191, 0.1);
+    }
+
+    .value-card-icon {
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent-light);
+      border-radius: 14px;
+      margin-bottom: 24px;
+    }
+
+    .value-card-icon svg {
+      width: 28px;
+      height: 28px;
+      stroke: var(--accent-dark);
+      stroke-width: 2;
+    }
+
+    .value-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .value-card p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* Team Section */
+    .team-section {
+      padding: 80px 48px;
+      background: var(--bg-primary);
+      border-top: 1px solid var(--border);
+    }
+
+    .team-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .team-text .section-label {
+      display: inline-block;
+      margin-bottom: 24px;
+    }
+
+    .team-text h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.2;
+      color: var(--text-primary);
+      margin-bottom: 32px;
+    }
+
+    .team-text p {
+      font-size: 16px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .team-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .team-stats {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .team-stat {
+      padding: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .team-stat:last-child {
+      border-bottom: none;
+    }
+
+    .team-stat-value {
+      font-size: clamp(22px, 2.5vw, 28px);
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .team-stat-label {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* Differentiator Section */
+    .differentiator-section {
+      padding: 80px 48px;
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+    }
+
+    .differentiator-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .differentiator-section .section-label {
+      display: inline-block;
+      margin-bottom: 24px;
+    }
+
+    .differentiator-section h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.2;
+      color: var(--text-primary);
+      margin-bottom: 64px;
+    }
+
+    .comparison-table {
+      border-collapse: collapse;
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .comparison-table tr {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .comparison-table tr:last-child {
+      border-bottom: none;
+    }
+
+    .comparison-table td {
+      padding: 24px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .comparison-table td:first-child {
+      width: 50%;
+      background: var(--accent-light);
+      color: var(--text-primary);
+      font-weight: 500;
+      border-right: 1px solid var(--border);
+      position: relative;
+      padding-left: 40px;
+    }
+
+    .comparison-table td:first-child::before {
+      content: '✓';
+      position: absolute;
+      left: 16px;
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .comparison-table td:last-child {
+      color: var(--text-secondary);
+      background: rgba(0, 0, 0, 0.02);
+      position: relative;
+      padding-left: 40px;
+    }
+
+    .comparison-table td:last-child::before {
+      content: '─';
+      position: absolute;
+      left: 16px;
+      color: rgba(0, 0, 0, 0.2);
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .comparison-table thead th {
+      padding: 20px 24px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .comparison-table thead th:first-child {
+      width: 50%;
+      background: var(--accent-light);
+      color: var(--accent-dark);
+      border-right: 1px solid var(--border);
+    }
+
+    .comparison-table thead th:last-child {
+      background: rgba(0, 0, 0, 0.02);
+      color: var(--text-muted);
+    }
+
+    /* Bottom CTA */
+    .about-cta {
+      padding: 100px 48px;
+      background: var(--dark-bg-gradient);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-cta::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(45, 212, 191, 0.12) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .about-cta-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+    }
+
+    .about-cta h2 {
+      font-size: clamp(36px, 4vw, 48px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      color: #fff;
+      margin-bottom: 8px;
+      line-height: 1.15;
+    }
+
+    .about-cta p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+
+    .about-cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .about-hero,
+      .about-stats-bar,
+      .story-section,
+      .partner-section,
+      .about-screenshot-section,
+      .values-section,
+      .team-section,
+      .differentiator-section,
+      .about-cta {
+        padding: 60px 32px;
+      }
+
+      .about-hero h1,
+      .story-section h2,
+      .partner-section h2,
+      .about-screenshot-section h2,
+      .values-section h2,
+      .team-section h2,
+      .differentiator-section h2,
+      .about-cta h2 {
+        font-size: 36px;
+      }
+
+      .about-stats-container,
+      .partner-highlights {
+        gap: 32px;
+      }
+
+      .partner-highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .team-grid {
+        gap: 48px;
+      }
+
+      .values-grid {
+        gap: 32px;
+      }
+
+      .value-card {
+        padding: 32px;
+      }
+
+      .comparison-table td {
+        padding: 20px;
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .about-hero,
+      .about-stats-bar,
+      .story-section,
+      .partner-section,
+      .about-screenshot-section,
+      .values-section,
+      .team-section,
+      .differentiator-section,
+      .about-cta {
+        padding: 48px 24px;
+      }
+
+      .about-hero h1,
+      .story-section h2,
+      .partner-section h2,
+      .about-screenshot-section h2,
+      .values-section h2,
+      .team-section h2,
+      .differentiator-section h2,
+      .about-cta h2 {
+        font-size: 28px;
+      }
+
+      .about-hero p,
+      .story-section p,
+      .partner-section p,
+      .team-section p,
+      .about-cta p {
+        font-size: 16px;
+      }
+
+      .about-stats-container,
+      .partner-highlights {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .values-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .value-card {
+        padding: 24px;
+      }
+
+      .comparison-table thead {
+        display: none;
+      }
+
+      .comparison-table tbody {
+        display: block;
+      }
+
+      .comparison-table td {
+        display: block;
+        width: 100%;
+        padding: 16px;
+        padding-left: 40px;
+        box-sizing: border-box;
+      }
+
+      .comparison-table td:first-child {
+        width: 100%;
+        background: var(--accent-light);
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        font-weight: 600;
+      }
+
+      .comparison-table td:first-child::after {
+        content: ' — 360° AP';
+        font-weight: 700;
+        color: var(--accent-dark);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+      }
+
+      .comparison-table td:last-child::after {
+        content: ' — Typical';
+        font-weight: 600;
+        color: var(--text-muted);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+      }
+
+      .comparison-table tr {
+        display: block;
+        margin-bottom: 16px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .comparison-table tr:last-child {
+        margin-bottom: 0;
+      }
+
+      .about-cta-buttons {
+        flex-direction: column;
+      }
+
+      .about-cta-buttons a {
+        width: 100%;
+      }
+
+      .story-timeline {
+        padding-left: 30px;
+      }
+
+      .story-card::before {
+        left: -36px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P566L9TS"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"360° AP","alternateName":"360 AP","url":"https://360-ap.com","logo":"https://360-ap.com/images/logos/360ap-logo-dark.svg","sameAs":["https://www.linkedin.com/company/360%C2%B0-ap/"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://360-ap.com/"},{"@type":"ListItem","position":2,"name":"About Us","item":"https://360-ap.com/about"}]}
+</script>
+
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="logo">
+        <img src="images/logos/360ap-logo-dark.svg" alt="360° AP">
+      </a>
+      <div class="nav-links">
+        <div class="nav-dropdown">
+          <a href="solutions.html">Solutions
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="solutions.html">Solutions Overview</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="ap-assure.html">
+              <img src="images/logos/ap-assured-logo-main.svg" alt=""> AP Assure
+            </a>
+            <a href="ap-accurate.html">
+              <img src="images/logos/ap-accurate-logo-main.svg" alt=""> AP Accurate
+            </a>
+            <a href="ap-automate.html">
+              <img src="images/logos/ap-automated-logo-main.svg" alt=""> AP Automate
+            </a>
+            <a href="ap-assist.html">
+              <img src="images/logos/ap-assist-logo-main.svg" alt=""> AP Assist
+            </a>
+            <a href="ap-analyze.html">
+              <img src="images/logos/ap-analyse-logo-main.svg" alt=""> AP Analyze
+            </a>
+          </div>
+        </div>
+        <a href="pricing.html">Pricing</a>
+        <a href="integrations.html">Integrations</a>
+        <a href="about.html">About Us</a>
+        <div class="nav-dropdown">
+          <a href="#">Resources
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="blog.html">Blog</a>
+            <a href="videos.html">Videos</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <a href="demo.html" class="btn-primary">Request a Demo</a>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Menu" onclick="document.querySelector('.mobile-menu').classList.toggle('active'); this.classList.toggle('active');">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="solutions.html">Solutions</a>
+    <a href="ap-assure.html" class="mobile-sub">AP Assure</a>
+    <a href="ap-accurate.html" class="mobile-sub">AP Accurate</a>
+    <a href="ap-automate.html" class="mobile-sub">AP Automate</a>
+    <a href="ap-assist.html" class="mobile-sub">AP Assist</a>
+    <a href="ap-analyze.html" class="mobile-sub">AP Analyze</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="integrations.html">Integrations</a>
+    <a href="about.html">About Us</a>
+    <a href="blog.html">Resources</a>
+    <a href="blog.html" class="mobile-sub">Blog</a>
+    <a href="videos.html" class="mobile-sub">Videos</a>
+    <a href="demo.html" class="btn-primary">Request a Demo</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="about-hero-content">
+      <span class="section-label">About us</span>
+      <h1>We built the AP platform we spent 15 years wishing existed</h1>
+      <p>360° AP was founded by AP practitioners who spent their careers implementing, testing, and often being frustrated by the tools available in the market. We stopped working around the problems and built something that actually solves them.</p>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="about-stats-bar">
+    <div class="about-stats-container">
+      <div class="about-stat-item">
+        <div class="about-stat-value">15+ years</div>
+        <div class="about-stat-label">In AP consulting and implementations</div>
+      </div>
+      <div class="about-stat-item">
+        <div class="about-stat-value">200+</div>
+        <div class="about-stat-label">Organisations served across industries</div>
+      </div>
+      <div class="about-stat-item">
+        <div class="about-stat-value">50+ years</div>
+        <div class="about-stat-label">Combined team experience in AP and fintech</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story Section (Timeline) -->
+  <section class="story-section">
+    <div class="story-container">
+      <span class="section-label">Our story</span>
+      <h2>From recovery audits to a platform that prevents the problems in the first place</h2>
+      <div class="story-timeline">
+        <div class="story-card">
+          <h3>Where we started</h3>
+          <p>We started in accounts payable consulting. Recovery audits, process analysis, solution implementations. Over 15 years, we worked with hundreds of clients across industries and geographies. We analyzed their AP processes, recommended tools, and helped them implement those tools. And then we watched the same problems come back.</p>
+        </div>
+        <div class="story-card">
+          <h3>What we kept seeing</h3>
+          <p>The tools were fragmented. Reconciliation in one product, duplicate detection in another, invoice processing in a third. Each had its own login, its own data, and its own limitations. Cross-referencing anything meant exporting to spreadsheets. Reporting meant stitching data together by hand.</p>
+        </div>
+        <div class="story-card">
+          <h3>The turning point</h3>
+          <p>We tried to make existing solutions work. We pushed vendors for better integration. We built workarounds. Eventually, we decided it would be faster to build what we always wanted than to keep waiting for someone else to do it.</p>
+        </div>
+        <div class="story-card">
+          <h3>360° AP launches</h3>
+          <p>One platform, one login, five modules that share a single data layer. Everything we learned in 15 years of AP consulting is built into how it works.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Your Partner Section -->
+  <section class="partner-section">
+    <div class="partner-container">
+      <span class="section-label">How we work</span>
+      <h2>Your partner, not your vendor</h2>
+
+      <div class="partner-intro">
+        <p>We built 360° AP because we spent years on the other side of the vendor relationship. We saw what happened after the contracts were signed: support tickets disappeared into queues, implementation dragged on for months, and the people who sold the product were never the people who helped you use it.</p>
+        <p>We run things differently. Implementation is free because we want you live and seeing value, not stuck in a paid onboarding cycle. The proof of concept uses your actual data because a demo with sample data proves nothing. And the people you speak to during the sales process are the same people who support you after go-live.</p>
+      </div>
+
+      <div class="partner-highlights">
+        <div class="partner-highlight-card">
+          <div class="partner-highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <h3>Free Implementation</h3>
+          <p>We want you live and seeing value, not stuck in a paid onboarding cycle</p>
+        </div>
+        <div class="partner-highlight-card">
+          <div class="partner-highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+          <h3>Your Actual Data</h3>
+          <p>The proof of concept uses your actual data because a demo with sample data proves nothing</p>
+        </div>
+        <div class="partner-highlight-card">
+          <div class="partner-highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h3>Same People</h3>
+          <p>The people you speak to during the sales process are the same people who support you after go-live</p>
+        </div>
+      </div>
+
+      <p class="partner-closing">We stay involved because your results are how we measure ours. If the platform is not delivering what you need, we want to know about it before you do. That is what partnership looks like when it is not just a word on a website.</p>
+    </div>
+  </section>
+
+  <!-- Screenshot Carousel Section -->
+  <section class="about-screenshot-section">
+    <div class="about-screenshot-container">
+      <span class="section-label">The platform</span>
+      <h2>Built by practitioners. Used by AP teams.</h2>
+      <div class="carousel" id="about-carousel">
+        <div class="carousel-track">
+          <div class="carousel-slide active">
+            <div class="screenshot-frame">
+              <img src="images/screenshots/ap-assured-duplicate-detection.png" alt="AP Assure duplicate detection workbench">
+            </div>
+            <p class="carousel-caption">AP Assure duplicate detection workbench with Claim and Drop actions</p>
+          </div>
+          <div class="carousel-slide">
+            <div class="screenshot-frame">
+              <img src="images/screenshots/ap-accurate-statement-reconciliation-detail.png" alt="AP Accurate statement reconciliation">
+            </div>
+            <p class="carousel-caption">AP Accurate statement reconciliation with matched and unmatched lines</p>
+          </div>
+          <div class="carousel-slide">
+            <div class="screenshot-frame">
+              <img src="images/screenshots/ap-automated-invoice-management.jpg" alt="AP Automate invoice management">
+            </div>
+            <p class="carousel-caption">AP Automate intelligent document processing and invoice management</p>
+          </div>
+          <div class="carousel-slide">
+            <div class="screenshot-frame">
+              <img src="images/screenshots/ap-assist-reconciliation-overview-dashboard.png" alt="AP Assist AI assistant">
+            </div>
+            <p class="carousel-caption">AP Assist AI agent alongside the reconciliation dashboard</p>
+          </div>
+          <div class="carousel-slide">
+            <div class="screenshot-frame">
+              <img src="images/screenshots/ap-analyze-bi-dashboard.png" alt="AP Analyze BI dashboard">
+            </div>
+            <p class="carousel-caption">AP Analyze real-time BI dashboard with cross-module analytics</p>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn carousel-prev" aria-label="Previous screenshot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="carousel-dots">
+            <button class="carousel-dot active" data-slide="0" aria-label="Screenshot 1"></button>
+            <button class="carousel-dot" data-slide="1" aria-label="Screenshot 2"></button>
+            <button class="carousel-dot" data-slide="2" aria-label="Screenshot 3"></button>
+            <button class="carousel-dot" data-slide="3" aria-label="Screenshot 4"></button>
+            <button class="carousel-dot" data-slide="4" aria-label="Screenshot 5"></button>
+          </div>
+          <button class="carousel-btn carousel-next" aria-label="Next screenshot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (function() {
+      var container = document.getElementById('about-carousel');
+      var slides = container.querySelectorAll('.carousel-slide');
+      var dots = container.querySelectorAll('.carousel-dot');
+      var prevBtn = container.querySelector('.carousel-prev');
+      var nextBtn = container.querySelector('.carousel-next');
+      var current = 0;
+      function goTo(index) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (index + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+      }
+      prevBtn.addEventListener('click', function() { goTo(current - 1); });
+      nextBtn.addEventListener('click', function() { goTo(current + 1); });
+      dots.forEach(function(dot) {
+        dot.addEventListener('click', function() { goTo(parseInt(dot.dataset.slide)); });
+      });
+    })();
+  </script>
+
+  <!-- Values Section -->
+  <section class="values-section">
+    <div class="values-container">
+      <span class="section-label">What drives us</span>
+      <h2>The principles behind the platform</h2>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 2v20M2 12h20"/>
+            </svg>
+          </div>
+          <h3>Completeness</h3>
+          <p>The name says it. 360 degrees. The platform covers the full AP lifecycle because we saw what happens when it doesn't. Gaps between tools create blind spots, and blind spots cost money. We built for complete coverage from day one.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 16 16 12 12 8 8 12 12 16"/>
+            </svg>
+          </div>
+          <h3>Precision</h3>
+          <p>Accounts payable is a function where errors have direct financial consequences. Up to 99%+ document processing accuracy is not a marketing number. It is the standard we hold the platform to. From data extraction to duplicate detection to reconciliation matching, precision is built into every process.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>Partnership</h3>
+          <p>We charge nothing for implementation. We run the proof of concept with your actual data. We stay involved after launch. Our success is measured by your outcomes, not by hours billed.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <h3>Agility</h3>
+          <p>A focused team that moves fast. In product development, in implementation, and in responding to what our clients need. We do not have layers of bureaucracy between a client request and a platform update. That speed is a structural advantage, and we intend to keep it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <div class="team-container">
+      <div class="team-grid">
+        <div class="team-text">
+          <span class="section-label">The team</span>
+          <h2>AP practitioners who build technology, not the other way around</h2>
+          <p>The team behind 360° AP brings over 50 years of combined experience in accounts payable, financial technology, and software development. Collectively, we have analyzed hundreds of AP processes across diverse industries, implemented solutions for hundreds of clients, and led recovery audits that identified millions in overpayments, duplicates, and missed credits.</p>
+          <p>That hands-on experience is the foundation of the platform. Every feature in 360° AP reflects a real problem we encountered in a real AP environment, not a feature request from a product roadmap that has never touched live data.</p>
+        </div>
+        <div class="team-stats">
+          <div class="team-stat">
+            <div class="team-stat-value">50+ years</div>
+            <div class="team-stat-label">Combined experience in AP and fintech</div>
+          </div>
+          <div class="team-stat">
+            <div class="team-stat-value">Hundreds</div>
+            <div class="team-stat-label">Of AP processes analyzed</div>
+          </div>
+          <div class="team-stat">
+            <div class="team-stat-value">Millions</div>
+            <div class="team-stat-label">In recoveries identified</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Differentiator Section -->
+  <section class="differentiator-section">
+    <div class="differentiator-container">
+      <span class="section-label">Why we're different</span>
+      <h2>What you get from a team that has done this work themselves</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>360° AP</th>
+            <th>Typical in the market</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>One login, five modules sharing a single data layer</td>
+          <td>Separate products with separate logins, often from the same vendor</td>
+        </tr>
+        <tr>
+          <td>Free implementation and free proof of concept with your data</td>
+          <td>Paid professional services for implementation; demos with sample data only</td>
+        </tr>
+        <tr>
+          <td>Cross-module analytics connecting every AP process in one view</td>
+          <td>Analytics siloed within each tool, requiring manual consolidation</td>
+        </tr>
+        <tr>
+          <td>Personal, practitioner-led support from people who understand AP</td>
+          <td>Tiered support models where service quality drops after the sale</td>
+        </tr>
+        <tr>
+          <td>Start with one module; expand without re-implementation</td>
+          <td>Adding a new capability means a new vendor, new integration, new contract</td>
+        </tr>
+        <tr>
+          <td>An AI agent that resolves supplier queries using live AP data</td>
+          <td>Supplier queries handled manually or through basic ticketing with no context</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="about-cta">
+    <div class="about-cta-container">
+      <h2>See what we built</h2>
+      <p>Run a free proof of concept with your own AP data. Pick any module as your starting point. No cost. No commitment. Just your data, working in one platform.</p>
+      <div class="about-cta-buttons">
+        <a href="demo.html" class="btn-primary btn-large">
+          Request a Demo
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logos/360ap-logo-white.svg" alt="360° AP">
+          <p>One platform for your entire AP lifecycle. Built by AP practitioners who spent 15 years wishing it existed.</p>
+          <div class="footer-social" style="margin-top: 16px;">
+            <a href="https://www.linkedin.com/company/360%C2%B0-ap/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); transition: all 0.2s;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <a href="solutions.html">Solutions Overview</a>
+          <a href="ap-assure.html">AP Assure</a>
+          <a href="ap-accurate.html">AP Accurate</a>
+          <a href="ap-automate.html">AP Automate</a>
+          <a href="ap-assist.html">AP Assist</a>
+          <a href="ap-analyze.html">AP Analyze</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="integrations.html">Integrations</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Contact</h4>
+          <a href="contact.html">Contact Us</a>
+          <p><a href="mailto:sales@360-ap.com">sales@360-ap.com</a></p>
+         
+          <a href="demo.html" class="btn-primary" style="margin-top: 16px;">Request a Demo</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 360° AP (Pty) Ltd. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="privacy.html#cookies">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

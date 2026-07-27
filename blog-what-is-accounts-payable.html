@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is Accounts Payable? A Simple Guide | 360° AP</title>
+  <meta name="description" content="What is accounts payable? Learn the fundamentals of AP, why it matters for cash flow, common challenges, and how AI is transforming the process in 2026.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/cropped-AP_Favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/cropped-AP_Favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/cropped-AP_Favicon-180x180.png">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-P566L9TS');</script>
+  <!-- End Google Tag Manager -->
+  <style>
+    /* Blog Post Hero */
+    .blogpost-hero {
+      padding: 80px 48px 48px;
+      background: linear-gradient(180deg, rgba(45, 212, 191, 0.08) 0%, var(--bg-primary) 100%);
+      text-align: center;
+    }
+
+    .blogpost-hero-content {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .blogpost-hero .blog-card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .blogpost-hero .blog-card-category {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--accent-dark);
+      background: rgba(45, 212, 191, 0.1);
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+
+    .blogpost-hero .blog-card-date {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .blogpost-hero h1 {
+      font-size: clamp(32px, 4.5vw, 48px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.15;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+    }
+
+    .blogpost-hero .blogpost-excerpt {
+      font-size: 18px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    /* Blog Content */
+    .blogpost-content {
+      padding: 60px 48px 100px;
+      background: var(--bg-primary);
+    }
+
+    .blogpost-body {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .blogpost-body h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.5px;
+      line-height: 1.3;
+      margin: 48px 0 20px;
+    }
+
+    .blogpost-body h3 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.3px;
+      line-height: 1.3;
+      margin: 36px 0 16px;
+    }
+
+    .blogpost-body p {
+      font-size: 17px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .blogpost-body ul, .blogpost-body ol {
+      margin: 0 0 24px 24px;
+      padding: 0;
+    }
+
+    .blogpost-body li {
+      font-size: 17px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 8px;
+    }
+
+    .blogpost-body blockquote {
+      border-left: 3px solid var(--accent);
+      padding: 4px 0 4px 24px;
+      margin: 32px 0;
+    }
+
+    .blogpost-body blockquote p {
+      font-size: 18px;
+      font-style: italic;
+      color: var(--text-primary);
+      margin-bottom: 0;
+    }
+
+    /* Author / Back link */
+    .blogpost-footer {
+      max-width: 720px;
+      margin: 0 auto;
+      padding-top: 48px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .blogpost-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .blogpost-author-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0F2830 0%, #134E4A 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .blogpost-author-info span {
+      display: block;
+    }
+
+    .blogpost-author-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .blogpost-author-role {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .blogpost-back {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent-dark);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .blogpost-back:hover {
+      text-decoration: underline;
+    }
+
+    /* CTA Section */
+    .blogpost-cta {
+      padding: 80px 48px;
+      background: var(--bg-secondary);
+      text-align: center;
+    }
+
+    .blogpost-cta-box {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 56px 48px;
+      background: linear-gradient(135deg, #0F2830 0%, #134E4A 100%);
+      border-radius: 16px;
+    }
+
+    .blogpost-cta-box h2 {
+      font-size: clamp(28px, 3.5vw, 36px);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -1px;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .blogpost-cta-box p {
+      font-size: 17px;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .blogpost-cta-box .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .blogpost-hero {
+        padding: 60px 24px 36px;
+      }
+
+      .blogpost-image {
+        padding: 0 24px;
+      }
+
+      .blogpost-image-inner {
+        height: 240px;
+      }
+
+      .blogpost-content {
+        padding: 48px 24px 80px;
+      }
+
+      .blogpost-body h2 {
+        font-size: 24px;
+        margin-top: 36px;
+      }
+
+      .blogpost-footer {
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+      }
+
+      .blogpost-cta {
+        padding: 60px 24px;
+      }
+
+      .blogpost-cta-box {
+        padding: 40px 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P566L9TS"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"360° AP","alternateName":"360 AP","url":"https://360-ap.com","logo":"https://360-ap.com/images/logos/360ap-logo-dark.svg","sameAs":["https://www.linkedin.com/company/360%C2%B0-ap/"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://360-ap.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://360-ap.com/blog"},{"@type":"ListItem","position":3,"name":"What is Accounts Payable?","item":"https://360-ap.com/blog-what-is-accounts-payable"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"What is Accounts Payable? A Simple Guide to the Fundamentals","description":"What is accounts payable? Learn the fundamentals of AP, why it matters for cash flow, common challenges, and how AI is transforming the process in 2026.","url":"https://360-ap.com/blog-what-is-accounts-payable","datePublished":"2026-03-01","dateModified":"2026-03-01","author":{"@type":"Organization","name":"360° AP","url":"https://360-ap.com"},"publisher":{"@type":"Organization","name":"360° AP","url":"https://360-ap.com","logo":{"@type":"ImageObject","url":"https://360-ap.com/images/logos/360ap-logo-dark.svg"}},"isPartOf":{"@type":"WebSite","url":"https://360-ap.com"}}
+</script>
+
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="logo">
+        <img src="images/logos/360ap-logo-dark.svg" alt="360° AP">
+      </a>
+      <div class="nav-links">
+        <div class="nav-dropdown">
+          <a href="solutions.html">Solutions
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="solutions.html">Solutions Overview</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="ap-assure.html">
+              <img src="images/logos/ap-assured-logo-main.svg" alt=""> AP Assure
+            </a>
+            <a href="ap-accurate.html">
+              <img src="images/logos/ap-accurate-logo-main.svg" alt=""> AP Accurate
+            </a>
+            <a href="ap-automate.html">
+              <img src="images/logos/ap-automated-logo-main.svg" alt=""> AP Automate
+            </a>
+            <a href="ap-assist.html">
+              <img src="images/logos/ap-assist-logo-main.svg" alt=""> AP Assist
+            </a>
+            <a href="ap-analyze.html">
+              <img src="images/logos/ap-analyse-logo-main.svg" alt=""> AP Analyze
+            </a>
+          </div>
+        </div>
+        <a href="pricing.html">Pricing</a>
+        <a href="integrations.html">Integrations</a>
+        <a href="about.html">About Us</a>
+        <div class="nav-dropdown">
+          <a href="#">Resources
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="blog.html">Blog</a>
+            <a href="videos.html">Videos</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <a href="demo.html" class="btn-primary">Request a Demo</a>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Menu" onclick="document.querySelector('.mobile-menu').classList.toggle('active'); this.classList.toggle('active');">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="solutions.html">Solutions</a>
+    <a href="ap-assure.html" class="mobile-sub">AP Assure</a>
+    <a href="ap-accurate.html" class="mobile-sub">AP Accurate</a>
+    <a href="ap-automate.html" class="mobile-sub">AP Automate</a>
+    <a href="ap-assist.html" class="mobile-sub">AP Assist</a>
+    <a href="ap-analyze.html" class="mobile-sub">AP Analyze</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="integrations.html">Integrations</a>
+    <a href="about.html">About Us</a>
+    <a href="blog.html">Resources</a>
+    <a href="blog.html" class="mobile-sub">Blog</a>
+    <a href="videos.html" class="mobile-sub">Videos</a>
+    <a href="demo.html" class="btn-primary">Request a Demo</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="blogpost-hero">
+    <div class="blogpost-hero-content">
+      <div class="blog-card-meta">
+        <span class="blog-card-category">Guide</span>
+        <span class="blog-card-date">March 2026</span>
+      </div>
+      <h1>What is Accounts Payable? A Simple Guide to the Fundamentals</h1>
+      <p class="blogpost-excerpt">Accounts payable is one of the most important yet often misunderstood parts of business finance. Whether you run a small business, manage a growing team, or work in finance, understanding AP is essential to controlling cash flow, building strong supplier relationships, and avoiding costly mistakes.</p>
+    </div>
+  </section>
+
+  <!-- Blog Content -->
+  <section class="blogpost-content">
+    <div class="blogpost-body">
+
+      <p>If you've ever asked, "What is accounts payable?" you're not alone. In simple terms, Accounts Payable is the money your business owes to suppliers and vendors for goods or services you've already received, but haven't yet paid for.</p>
+
+      <p>It shows up on your balance sheet as a current liability - money you're obligated to pay in the short term (usually within 30, 60, or 90 days, depending on the agreed terms).</p>
+
+      <p>Think of AP as a record of all the 'IOUs' your business has issued. It tracks what you owe, when it's due, and how efficiently you're settling those promises.</p>
+
+      <h2>Why Accounts Payable matters more than most people realise</h2>
+
+      <p>A well-managed AP process delivers benefits far beyond just 'paying the bills.' Here's what's really at stake:</p>
+
+      <p><strong>Cash flow management:</strong> Smart AP practices help you hold onto your cash longer while still keeping suppliers happy. This improves your cashflow and gives you more breathing room for growth or unexpected expenses.</p>
+
+      <p><strong>Significant cost savings:</strong> Many vendors offer early-payment discounts (e.g., 2/10 net 30 - take 2% off if you pay within 10 days). Capturing these can add up to thousands - or even tens of thousands - in annual savings. Yet our data indicates the average company only captures about 58% of available discounts.</p>
+
+      <p><strong>Stronger vendor relationships:</strong> Consistent, on-time payments position your business as a reliable partner. This often leads to better pricing, priority service, longer payment terms, and even preferential treatment during supply shortages.</p>
+
+      <p><strong>Operational efficiency and risk reduction:</strong> A structured AP process cuts down on errors, duplicate payments, late fees, and fraud. It also ensures better compliance and audit readiness.</p>
+
+      <h2>Common challenges in Accounts Payable today</h2>
+
+      <p>Before we dive into the process, it's worth acknowledging the real pain points many businesses face in 2026:</p>
+
+      <ul>
+        <li>Manual data entry and processing errors</li>
+        <li>Slow approval workflows and bottlenecks</li>
+        <li>Disconnected systems (invoices arriving via email, portals, paper, etc.)</li>
+        <li>Difficulty spotting duplicate invoices or fraud</li>
+        <li>Missed early-payment discounts and late fees</li>
+        <li>Lack of real-time visibility into cash obligations</li>
+      </ul>
+
+      <p>These issues are widespread - the average Accounts Payable team still spends over nine days processing a single invoice, and manual processing can cost around $9-15 per invoice.</p>
+
+      <h2>The Accounts Payable process step-by-step</h2>
+
+      <p>Here's how a standard full-cycle accounts payable workflow works:</p>
+
+      <ol>
+        <li><strong>Purchase Order (PO) issued:</strong> Someone in your team identifies a need and creates a formal purchase order with quantities, prices, and delivery terms.</li>
+        <li><strong>Goods or services delivered:</strong> The supplier fulfills the order. Your receiving team verifies the delivery against the PO and records the receipt.</li>
+        <li><strong>Invoice received:</strong> The supplier sends the invoice (via email, portal, or mail).</li>
+        <li><strong>Invoice matching and verification (3-Way Matching):</strong> This is a critical control step. The invoice is matched against the original PO and the goods receipt note to confirm that quantities, prices, and terms all align.</li>
+        <li><strong>Invoice approval:</strong> The invoice is sent to the correct manager or budget owner for review and approval.</li>
+        <li><strong>Recording the invoice:</strong> Once approved, the invoice is entered into your accounting/ERP system and added to the AP ledger.</li>
+        <li><strong>Payment issued:</strong> Payment is scheduled and executed (via ACH, wire, virtual card, or cheque) on or before the due date.</li>
+        <li><strong>Reconciliation and reporting:</strong> Accounts Payable teams regularly reconcile vendor statements, clear outstanding items, and ensure accurate financial reporting.</li>
+      </ol>
+
+      <p>When done manually, this process is slow and error-prone. This is exactly why so many businesses are now choosing to automate.</p>
+
+      <h2>How Artificial Intelligence is transforming Accounts Payable in 2026</h2>
+
+      <p>The biggest shift happening right now is the rapid adoption of AI-powered AP automation. Traditional AP - full of spreadsheets, paper, and email chains - is being replaced by intelligent systems that handle most of the heavy lifting.</p>
+
+      <h3>What AI can do for your AP team today</h3>
+
+      <ul>
+        <li>Automatically extract data from PDFs, scanned documents, emails, and even photos with over 99% accuracy (far better than old OCR technology)</li>
+        <li>Suggest the correct general ledger (GL) codes based on past patterns</li>
+        <li>Detect duplicates, mismatches, anomalies, and potential fraud in real time</li>
+        <li>Learn your approval workflows and route invoices intelligently</li>
+        <li>Provide real-time dashboards showing upcoming liabilities and cash requirements</li>
+        <li>Flag early-payment discount opportunities automatically</li>
+      </ul>
+
+      <h3>Real impact backed by 2025-2026 data</h3>
+
+      <ul>
+        <li>Automation reduces invoice processing costs by 60-80% (often bringing the cost per invoice down from $9-15 to $2-5)</li>
+        <li>Processing time drops dramatically - many companies cut cycles from 9-15 days, down to 2-4 days, or even same-day</li>
+        <li>Error rates fall from around 2% in manual processes to under 0.8%</li>
+        <li>Teams can process 2x-3x more invoices per full-time employee</li>
+        <li>Early discount capture rates jump from 58% to 85-95% in automated environments</li>
+        <li>Some organisations report 70-80% overall time savings on AP tasks, freeing employees for higher-value work</li>
+      </ul>
+
+      <blockquote>
+        <p>AI isn't replacing AP professionals - it's allowing them to be more efficient. Finance teams spend far less time on data entry and chasing approvals, and much more time on strategic analysis, supplier relationship management, and forecasting.</p>
+      </blockquote>
+
+      <h2>Final thoughts and next steps</h2>
+
+      <p>Accounts Payable is far more than 'just paying bills.' When managed well, it becomes a powerful lever for better cash flow, stronger partnerships, lower costs, and reduced risk.</p>
+
+      <p>If your team is still relying heavily on manual processes, spreadsheets, or outdated systems, now is the perfect time to explore modern AP automation - especially AI-driven solutions. The return on investment is typically achieved within 12-18 months, and the efficiency gains compound quickly.</p>
+
+      <p>If you're ready to improve your Accounts Payable process, <a href="contact.html">get in touch</a>. We help businesses audit their current workflow and identify quick wins, with or without new software.</p>
+
+      <p><em>This article is for informational purposes only and does not constitute financial or accounting advice. Always consult a qualified professional for guidance specific to your business.</em></p>
+
+      <!-- Author / Back -->
+      <div class="blogpost-footer">
+        <div class="blogpost-author">
+          <div class="blogpost-author-avatar">AP</div>
+          <div class="blogpost-author-info">
+            <span class="blogpost-author-name">360° AP</span>
+            <span class="blogpost-author-role">AP Automation Experts</span>
+          </div>
+        </div>
+        <a href="blog.html" class="blogpost-back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          Back to blog
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="blogpost-cta">
+    <div class="blogpost-cta-box">
+      <h2>See what your AP data actually looks like in one place</h2>
+      <p>Run a free proof of concept with your own statements, invoices, and ERP data. No cost. No commitment. Just your data, working.</p>
+      <a href="demo.html" class="btn-primary btn-large">
+        Book a Demo
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logos/360ap-logo-white.svg" alt="360° AP">
+          <p>One platform for your entire AP lifecycle. Built by AP practitioners who spent 15 years wishing it existed.</p>
+          <div class="footer-social" style="margin-top: 16px;">
+            <a href="https://www.linkedin.com/company/360%C2%B0-ap/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); transition: all 0.2s;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <a href="solutions.html">Solutions Overview</a>
+          <a href="ap-assure.html">AP Assure</a>
+          <a href="ap-accurate.html">AP Accurate</a>
+          <a href="ap-automate.html">AP Automate</a>
+          <a href="ap-assist.html">AP Assist</a>
+          <a href="ap-analyze.html">AP Analyze</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="integrations.html">Integrations</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Contact</h4>
+          <a href="contact.html">Contact Us</a>
+          <p><a href="mailto:sales@360-ap.com">sales@360-ap.com</a></p>
+          
+          <a href="demo.html" class="btn-primary" style="margin-top: 16px;">Request a Demo</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 360° AP (Pty) Ltd. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="privacy.html#cookies">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

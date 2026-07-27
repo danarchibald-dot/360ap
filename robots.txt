@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /contact-thank-you
+Disallow: /demo-thank-you
+
+Sitemap: https://360-ap.com/sitemap.xml
