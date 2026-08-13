@@ -1224,6 +1224,12 @@ body[data-product] .section-label {
   color: var(--text-primary);
   margin-bottom: 20px;
 }
+.solution-hero .herolist-description {
+  font-size: 18px;
+
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
 
 .solution-hero .hero-description {
   font-size: 18px;
@@ -1767,6 +1773,28 @@ body[data-product] .feature-card:hover {
 
   .mobile-menu-toggle {
     display: flex;
+  }
+
+ .herolist {
+    padding: 60px 24px 30px;
+  }
+
+  .herolist h1 {
+    font-size: 36px;
+    letter-spacing: -1.5px;
+  }
+
+  .herolist-description {
+    font-size: 16px;
+  }
+
+  .herolist-cta {
+    flex-direction: column;
+  }
+
+  .herolist-cta a {
+    width: 100%;
+    justify-content: center;
   }
 
   .hero {
