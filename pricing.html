@@ -55,7 +55,7 @@
 
     /* Pricing Table Section */
     .pricing-table-section {
-      padding: 40px 48px 80px;
+     
       background: var(--bg-primary);
     }
 
@@ -81,11 +81,7 @@
       background: var(--bg-secondary);
     }
 
-    .pricing-table thead th:first-child,
-    .pricing-table thead th:nth-child(2),
-    .pricing-table thead th:nth-child(3) {
-      text-align: left;
-    }
+ 
 
     .pricing-table thead th .product-header {
       display: flex;
@@ -126,11 +122,7 @@
       color: var(--text-secondary);
     }
 
-    .pricing-table tbody td:first-child,
-    .pricing-table tbody td:nth-child(2),
-    .pricing-table tbody td:nth-child(3) {
-      text-align: left;
-    }
+
 
     .pricing-table tbody td:first-child {
       font-weight: 700;
@@ -345,7 +337,7 @@
         </div>
       </div>
       <div class="nav-actions">
-        <a href="demo.html" class="btn-primary">Request a Demo</a>
+        <a href="demo.html" class="btn-primary">Contact Us</a>
       </div>
       <button class="mobile-menu-toggle" aria-label="Menu" onclick="document.querySelector('.mobile-menu').classList.toggle('active'); this.classList.toggle('active');">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
@@ -371,7 +363,7 @@
     <a href="blog.html">Resources</a>
     <a href="blog.html" class="mobile-sub">Blog</a>
     <a href="videos.html" class="mobile-sub">Videos</a>
-    <a href="demo.html" class="btn-primary">Request a Demo</a>
+    <a href="demo.html" class="btn-primary">Contact Us</a>
   </div>
 
   <!-- Hero -->
@@ -379,7 +371,7 @@
     <div class="pricing-hero-content">
       <span class="section-label">Pricing</span>
       <h1>Five modules. One platform. Pick what you need.</h1>
-      <p>No onboarding costs, what you see is what you pay. No Fixed term contract. Buy more than one module and get a 20% discount.</p>
+      <p>Use one module or all five. Each one works on its own, but they're built to work better together.</p>
     </div>
   </section>
 
@@ -391,12 +383,10 @@
         <thead>
           <tr>
             <th></th>
-            <th></th>
-            <th></th>
             <th>
               <div class="product-header">
                 <span class="product-name">AP Assure</span>
-                <span class="product-desc">Duplicate Payment Detection & Prevention</span>
+                <span class="product-desc">Supplier Duplicate Payment Detection & Prevention</span>
               </div>
             </th>
             <th>
@@ -408,7 +398,7 @@
             <th>
               <div class="product-header">
                 <span class="product-name">AP Automate</span>
-                <span class="product-desc">Supplier Invoice & Credit Note Capture</span>
+                <span class="product-desc">Supplier Invoice & Credit Note Automation</span>
               </div>
             </th>
             <th>
@@ -427,40 +417,19 @@
         </thead>
         <tbody>
           <tr class="tier-starter">
-            <td>Starter</td>
-            <td>Up to 50k</td>
-            <td>Small teams, low volume</td>
-            <td><span class="price">$1,350</span></td>
-            <td><span class="price">$1,450</span></td>
-            <td><span class="price">$3,200</span></td>
+            <td>Priced Based on volume</td>
+            <td><span class="price">$300 - $4,000</span></td>
+            <td><span class="price">$300 - $5,000</span></td>
+            <td><span class="price">$1,000 - $8,000</span></td>
             <td><span class="price">$100</span></td>
             <td><span class="price">$200</span></td>
           </tr>
-          <tr class="tier-growth">
-            <td>Growth</td>
-            <td>51k - 150k</td>
-            <td>Growing businesses</td>
-            <td><span class="price">$1,850</span></td>
-            <td><span class="price">$2,250</span></td>
-            <td><span class="price">$8,000</span></td>
-            <td><span class="price">$200</span></td>
-            <td><span class="price">$250</span></td>
-          </tr>
-          <tr class="tier-professional">
-            <td>Professional</td>
-            <td>151k - 400k</td>
-            <td>Mid-market</td>
-            <td><span class="price">$2,350</span></td>
-            <td><span class="price">$2,750</span></td>
-            <td><span class="price">$18,000</span></td>
-            <td><span class="price">$300</span></td>
-            <td><span class="price">$300</span></td>
-          </tr>
+        
           <tr class="tier-enterprise">
-            <td>Enterprise</td>
-            <td>401k+</td>
+    
             <td>Large / complex needs</td>
-            <td colspan="5" class="enterprise-cta">Contact us for a tailor-made quote</td>
+            <td colspan="5" class="enterprise-cta"> <a href="demo.html" class="btn-primary" style="margin-top: 16px;">Contact us for a quote</a>
+</td>
           </tr>
         </tbody>
       </table>
