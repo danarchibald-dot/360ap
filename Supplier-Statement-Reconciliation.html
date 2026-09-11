@@ -33,7 +33,354 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Service","name":"AP Accurate","description":"Supplier statement reconciliation that imports statements in PDF, Excel, or CSV format and matches them line by line against ERP records, turning a multi-day process into hours.","url":"https://360-ap.com/ap-accurate","provider":{"@type":"Organization","name":"360° AP","url":"https://360-ap.com"},"serviceType":"Supplier statement reconciliation","areaServed":{"@type":"Place","name":"Worldwide"}}
 </script>
+<style>
+  /* Contact Section */
+    .contact-section {
+      padding: 40px 48px 100px;
+      background: var(--bg-primary);
+    }
 
+    .contact-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    /* Form Styles */
+    .contact-form-wrapper {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 48px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .contact-form .form-group {
+      margin-bottom: 24px;
+    }
+
+    .contact-form .form-group:last-of-type {
+      margin-bottom: 32px;
+    }
+
+    .contact-form label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px 16px;
+      font-size: 15px;
+      font-family: 'Inter', sans-serif;
+      color: var(--text-primary);
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      box-sizing: border-box;
+    }
+
+    .contact-form input[type="text"]:focus,
+    .contact-form input[type="email"]:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.15);
+    }
+
+    .contact-form textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .contact-form button[type="submit"] {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      color: #fff;
+      background: var(--coral);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .contact-form button[type="submit"]:hover {
+      background: #e86b5a;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(249, 123, 108, 0.3);
+    }
+
+    .contact-form button[type="submit"] svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    /* Contact Details */
+    .contact-details {
+      padding-top: 16px;
+    }
+
+    .contact-details h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 32px;
+    }
+
+    .contact-detail-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .contact-detail-icon {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(45, 212, 191, 0.15);
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+
+    .contact-detail-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: var(--accent);
+    }
+
+    .contact-detail-text h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+      margin-top: 0;
+    }
+
+    .contact-detail-text p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    .contact-detail-text a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .contact-detail-text a:hover {
+      color: var(--accent);
+    }
+
+/* Integration Section */
+    .integrations-overview {
+      padding: 100px 48px;
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .integrations-overview-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .integrations-overview p {
+      font-size: 16px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .integrations-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+      transition: gap 0.2s ease;
+    }
+
+    .integrations-link:hover {
+      gap: 10px;
+    }
+
+    .integrations-link svg {
+      width: 16px;
+      height: 16px;
+    }
+/* Responsive adjustments */
+    @media (max-width: 1024px) {
+      .solution-detail-card {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 60px 40px;
+      }
+
+      .solution-detail-card.reversed {
+        direction: ltr;
+      }
+
+      .cross-module-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .hero-product-logos {
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+
+      .erp-logos {
+        gap: 32px;
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .solutions-overview-hero {
+        padding: 60px 24px 80px;
+      }
+
+      .hero-product-logos {
+        gap: 20px;
+      }
+
+      .hero-product-logos img {
+        height: 24px;
+      }
+
+      .hero-product-logos img.assist-logo {
+        height: 28px;
+      }
+
+      .erp-logos {
+        gap: 24px;
+      }
+
+      .erp-logos img {
+        height: 28px;
+      }
+
+      .solutions-overview-hero h1 {
+        font-size: 32px;
+      }
+
+      .solutions-overview-hero p {
+        font-size: 16px;
+      }
+
+      .solution-detail-card {
+        padding: 40px 24px;
+        gap: 32px;
+      }
+
+      .solution-detail-name {
+        font-size: 24px;
+      }
+
+      .cross-module-section {
+        padding: 60px 24px;
+      }
+
+      .cross-module-closing {
+        padding: 24px;
+      }
+
+      .start-with-one {
+        padding: 60px 24px;
+      }
+
+      .integrations-overview {
+        padding: 60px 24px;
+      }
+    }
+
+
+    /* Demo CTA box */
+    .contact-demo-cta {
+      margin-top: 48px;
+      padding: 32px;
+      background: linear-gradient(135deg, #0F2830 0%, #134E4A 100%);
+      border-radius: 16px;
+    }
+
+    .contact-demo-cta h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    .contact-demo-cta p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 20px;
+    }
+
+    .contact-demo-cta a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      background: var(--coral);
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .contact-demo-cta a:hover {
+      background: #e86b5a;
+      transform: translateY(-1px);
+    }
+
+    .contact-demo-cta a svg {
+      width: 16px;
+      height: 16px;
+    }
+    .erp-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      margin-top: 32px;
+    }
+
+    .erp-logos img {
+      height: 36px;
+      width: auto;
+      object-fit: contain;
+    }
+</style>
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- Navigation -->
@@ -113,63 +460,124 @@
   <!-- Hero Section -->
   <section class="solution-hero accurate-hero">
     <div class="solution-hero-container">
-      <div class="solution-hero-content">
-    
-        <h1>Take the Effort Out of Supplier Statement Reconciliation.</h1></br>
+
+      <div class="hero-visual">
+       
+<ul>
+ <h1>Take the Effort Out of Supplier Statement Reconciliation.</h1></br>
         <p class="herolist-description">1, Automatically import supplier statements in <b>any</b> format.</p><p class="herolist-description">2, Automatically match them <b>line by line</b> against your ERP records.</p><p class="herolist-description">3, Automatically flag and <b>chase</b> every discrepancy.</p>
 <p class="herolist-description">4, Automatically report to your <b>AP Team</b> throughout the month.</p>
 <p class="herolist-description"></br>
 <p class="herolist-description">A reconciliation that runs <b>itself</b> from start to finish.</p></br>
- <p class="herolist-description"><b>Your</b> team handles the exceptions. <b>AP Accurate</b> handles the rest.</p></br>
 
-
-        <p class="herolist-description">See it with your own data. <b>Free</b> proof of concept included.</p></br>
-        <div class="hero-cta">
-          <a href="demo.html" class="btn-primary btn-large">
-            Contact Us
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
-        </div>
-
-      </div>
-      <div class="hero-visual">
-       
-<ul>
   <li class="herolist-description"><h3>Full automation, reducing the load by 80% for AP teams</h3>Once sent up our system processes statements, chases for missing or incorrect items and reports back to the AP team so they can see how the process is going throughout the month. </li></br>
 
   <li class="herolist-description"><h3>Fewer Supplier Queries</h3>Large reduction in queries coming in to you AP team thanks to our automation that chases and informs suppliers on your behalf and our portal that allows supplier to sign in and get their own answers.</li>
 </br>
   <li class="herolist-description"><h3>Audit-ready trail</h3> Month-end reconciliation in hours, not days, with evidence filed at every status change. Nothing to reconstruct at year-end, no documentation after the fac.</li></br>
-<li class="herolist-description"><h3>Get missing credits and cash back</h3>Analysis to recover money that has never been invoiced,indentifing Aged GRNI money hiding in your GR/IR account: over-accruals to release back to profit, duplicate GRs, payments outside the PO, and credits nobody ever claimed.</li>
+<li class="herolist-description"><h3>Get missing credits and cash back</h3>Analysis to recover money that has never been invoiced,indentifing Aged GRNI money hiding in your GR/IR account: over-accruals to release back to profit, duplicate GRs, payments outside the PO, and credits nobody ever claimed.</li></br>
+<div class="integrations-overview-container">
+      
+        <li class="herolist-description"><h3>Native ERP integration with minimal IT overhead</h3></li>
+     
+      <p>360° AP connects directly with SAP, Oracle NetSuite, Coupa, and Microsoft Dynamics 365. Real-time sync. Minimal IT resources to get live. No middleware to manage.</p>
+ 
+      <div class="erp-logos">
+        <img src="images/erp-logos/sap.jpg" alt="SAP">
+        <img src="images/erp-logos/netsuite.png" alt="Oracle NetSuite">
+        <img src="images/erp-logos/coupa.png" alt="Coupa">
+        <img src="images/erp-logos/dynamics.jpg" alt="Microsoft Dynamics 365">
+      </div>
+    </div>
 </ul>
+
           
         
       </div>
+     <section class="screenshot-carousel-section">
+    <div class="screenshot-carousel-container">
+      <div class="carousel">
+        <div class="carousel-track">
+          <div class="carousel-slide active">
+            <div class="screenshot-frame">
+              <img src="images/screenshots/ap-accurate-statement-reconciliation-detail.png" alt="Line-by-line reconciliation detail showing matched and unmatched items side by side">
+            </div>
+            <p class="carousel-caption">Line-by-line reconciliation detail showing matched and unmatched items side by side</p>
+          </div>
+          <div class="carousel-slide">
+            <div class="screenshot-frame">
+              <img src="images/screenshots/fullymatched.png" alt="Fully matched Supplier Statement">
+            </div>
+            <p class="carousel-caption">Statements are automatically chased untill the are fully matched</p>
+          </div>
+          <div class="carousel-slide">
+            <div class="screenshot-frame">
+              <img src="images/screenshots/AP-Overview.png" alt="Overview of the entire AP processs">
+            </div>
+            <p class="carousel-caption">Overview of the entire AP processs</p>
+          </div>
+          <div class="carousel-slide">
+            <div class="screenshot-frame">
+              <img src="images/screenshots/Supplier-recon-report.png" alt="Audit-ready reconciliation report with summary, reconciled details, and variance analysis">
+            </div>
+            <p class="carousel-caption">Audit-ready reconciliation report with summary, reconciled details, and variance analysis</p>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn carousel-prev" aria-label="Previous screenshot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="carousel-dots">
+            <button class="carousel-dot active" data-slide="0" aria-label="Screenshot 1"></button>
+            <button class="carousel-dot" data-slide="1" aria-label="Screenshot 2"></button>
+            <button class="carousel-dot" data-slide="2" aria-label="Screenshot 3"></button>
+            <button class="carousel-dot" data-slide="3" aria-label="Screenshot 4"></button>
+          </div>
+          <button class="carousel-btn carousel-next" aria-label="Next screenshot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+<div class="solution-hero-content">
+    <h2>Request a <b>Free</b> proof of concept with you own data.</p></h2></br>
+       
+<div class="contact-form-wrapper">
+          <form name="contact" method="POST" data-netlify="true" action="/contact-thank-you" class="contact-form">
+            <input type="hidden" name="form-name" value="contact">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" required>
+            </div>
+   
+            <button type="submit">
+              Send Request for More Info
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </form>
+        </div>
+
+   
+         
+
+
+      </div>
+  </section>
+
+      
+</div>
+
     </div>
   </section>
-<section class="stats-bar">
-    <div class="stats-container">
-      <div class="stat-item">
-        <div class="stat-value">Hours, not days</div>
-        <div class="stat-label">Statement reconciliation turnaround</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-value">99%+</div>
-        <div class="stat-label">Matching accuracy against ERP records</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-value">Any format</div>
-        <div class="stat-label">PDF, Excel, CSV statement import with intelligent parsing</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-value">Full audit<br>trail</div>
-        <div class="stat-label">Every match, exception, and resolution tracked and reportable</div>
-      </div>
-    </div>
-  </section>
+
 
   <!-- Problem Block -->
   <section class="problem-split">
@@ -268,53 +676,7 @@
     </div>
   </section>
 
-  <!-- Screenshot Carousel -->
-  <section class="screenshot-carousel-section">
-    <div class="screenshot-carousel-container">
-      <div class="carousel">
-        <div class="carousel-track">
-          <div class="carousel-slide active">
-            <div class="screenshot-frame">
-              <img src="images/screenshots/ap-accurate-statement-reconciliation-detail.png" alt="Line-by-line reconciliation detail showing matched and unmatched items side by side">
-            </div>
-            <p class="carousel-caption">Line-by-line reconciliation detail showing matched and unmatched items side by side</p>
-          </div>
-          <div class="carousel-slide">
-            <div class="screenshot-frame">
-              <img src="images/screenshots/preferences-ap-accurate-matching-rules.png" alt="Configurable matching rules and preferences for your reconciliation workflow">
-            </div>
-            <p class="carousel-caption">Configurable matching rules and preferences for your reconciliation workflow</p>
-          </div>
-          <div class="carousel-slide">
-            <div class="screenshot-frame">
-              <img src="images/screenshots/preferences-ap-accurate-new-matching-rule.png" alt="Creating custom matching rules with tolerance thresholds and criteria">
-            </div>
-            <p class="carousel-caption">Creating custom matching rules with tolerance thresholds and criteria</p>
-          </div>
-          <div class="carousel-slide">
-            <div class="screenshot-frame">
-              <img src="images/screenshots/ap-accurate-reconciliation-report.png" alt="Audit-ready reconciliation report with summary, reconciled details, and variance analysis">
-            </div>
-            <p class="carousel-caption">Audit-ready reconciliation report with summary, reconciled details, and variance analysis</p>
-          </div>
-        </div>
-        <div class="carousel-controls">
-          <button class="carousel-btn carousel-prev" aria-label="Previous screenshot">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-          </button>
-          <div class="carousel-dots">
-            <button class="carousel-dot active" data-slide="0" aria-label="Screenshot 1"></button>
-            <button class="carousel-dot" data-slide="1" aria-label="Screenshot 2"></button>
-            <button class="carousel-dot" data-slide="2" aria-label="Screenshot 3"></button>
-            <button class="carousel-dot" data-slide="3" aria-label="Screenshot 4"></button>
-          </div>
-          <button class="carousel-btn carousel-next" aria-label="Next screenshot">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <script>
     (function() {
