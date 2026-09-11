@@ -1204,7 +1204,7 @@ body[data-product] .section-label {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
-  align-items: center;
+
 }
 
 .solution-hero-badge {
@@ -1273,7 +1273,7 @@ body[data-product] .feature-card:hover {
 
 /* ==================== PROBLEM SPLIT (solution pages) ==================== */
 .problem-split {
-  padding: 80px 48px;
+
   background: var(--bg-primary);
 }
 
