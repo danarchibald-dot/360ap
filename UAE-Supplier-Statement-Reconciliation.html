@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="360° AP UAE — automated supplier statement reconciliation for finance teams. Reconcile supplier accounts in hours, not days." />
+  <title>360° AP UAE | Automated Supplier Statement Reconciliation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d1718;
+      --bg-2: #142224;
+      --panel: #17282a;
+      --panel-2: #edf8f6;
+      --text: #f5f8f8;
+      --muted: #a9b8b8;
+      --ink: #142224;
+      --teal: #23a99f;
+      --teal-dark: #178c84;
+      --blue: #66aeef;
+      --line: rgba(255,255,255,.1);
+      --white: #fff;
+      --shadow: 0 18px 50px rgba(0,0,0,.16);
+      --radius: 22px;
+      --radius-sm: 14px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.55;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .wrap { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(13,23,24,.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .nav-inner {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      font-size: 1.08rem;
+    }
+    .brand-mark {
+      width: 42px; height: 42px;
+      display: grid; place-items: center;
+      border-radius: 50%;
+      border: 3px solid var(--teal);
+      color: var(--teal);
+      font-weight: 800;
+      font-size: .95rem;
+    }
+    .nav-links { display: flex; gap: 28px; color: #dce7e7; font-size: .95rem; }
+    .nav-links a:hover { color: #fff; }
+    .nav-actions { display: flex; align-items: center; gap: 14px; }
+    .uae-pill {
+      border: 1px solid rgba(255,255,255,.14);
+      color: #dce7e7;
+      padding: 9px 13px;
+      border-radius: 999px;
+      font-size: .84rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: .2s ease;
+      cursor: pointer;
+    }
+    .btn-primary { background: var(--teal); color: #061211; }
+    .btn-primary:hover { background: #2ec1b6; transform: translateY(-1px); }
+    .btn-ghost { border-color: rgba(255,255,255,.16); color: #fff; background: rgba(255,255,255,.03); }
+    .btn-ghost:hover { background: rgba(255,255,255,.07); }
+    .btn-dark { background: var(--ink); color: #fff; }
+
+    .hero {
+      background:
+        radial-gradient(circle at 78% 20%, rgba(35,169,159,.16), transparent 34%),
+        linear-gradient(180deg, #0d1718 0%, #122123 100%);
+      color: var(--text);
+      padding: 86px 0 74px;
+      overflow: hidden;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 58px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .8rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #8fe0d8;
+      margin-bottom: 18px;
+    }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 6px rgba(35,169,159,.12); }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.8rem, 6vw, 5.65rem);
+      line-height: .96;
+      letter-spacing: -.055em;
+      max-width: 900px;
+    }
+    h1 .accent { color: var(--teal); }
+    .hero-copy {
+      max-width: 690px;
+      color: #c9d6d6;
+      font-size: 1.15rem;
+      margin: 24px 0 28px;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .micro { color: #91a4a4; font-size: .9rem; margin-top: 18px; }
+
+    .mock {
+      background: #f5f8f8;
+      color: var(--ink);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transform: rotate(1deg);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    .mock-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 18px;
+      background: #132224;
+      color: #fff;
+    }
+    .mock-title { font-size: .92rem; font-weight: 700; }
+    .mock-status { color: #8fe0d8; font-size: .78rem; font-weight: 700; }
+    .mock-body { padding: 20px; }
+    .supplier {
+      display: flex; justify-content: space-between; gap: 16px; align-items: center;
+      margin-bottom: 18px;
+    }
+    .supplier small { display: block; color: #718080; margin-bottom: 4px; }
+    .supplier strong { font-size: 1.15rem; }
+    .score {
+      background: #dff6f2; color: #0f706a; font-weight: 800; padding: 10px 12px; border-radius: 12px;
+    }
+    .stats { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; }
+    .stat {
+      border: 1px solid #dfe7e7;
+      background: #fff;
+      border-radius: 14px;
+      padding: 14px;
+    }
+    .stat span { display:block; color:#738181; font-size:.78rem; }
+    .stat strong { display:block; margin-top:5px; font-size:1.35rem; }
+    .good { color: #128378; }
+    .warn { color: #b46911; }
+    .bad { color: #a43a3a; }
+    .mock-table { margin-top: 16px; border-top: 1px solid #e1e7e7; }
+    .row { display:grid; grid-template-columns: 1.3fr .9fr .9fr; padding: 12px 2px; border-bottom: 1px solid #eef2f2; font-size:.82rem; }
+    .row.head { color:#718080; font-weight:700; }
+    .tag { justify-self:start; padding: 5px 8px; border-radius:999px; background:#e7f8f4; color:#14786f; font-weight:700; }
+
+    .logos-strip {
+      background: #0f1c1e;
+      color: #b6c4c4;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 18px 0;
+    }
+    .logos-flex { display:flex; flex-wrap:wrap; gap:26px; align-items:center; justify-content:space-between; font-size:.9rem; }
+    .logos-flex strong { color:#fff; }
+
+    section { padding: 88px 0; }
+    .section-head { max-width: 760px; margin-bottom: 38px; }
+    .kicker { color: var(--teal-dark); font-weight: 800; text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; }
+    h2 { font-size: clamp(2.1rem, 4vw, 3.8rem); line-height: 1.03; letter-spacing: -.045em; margin: 9px 0 16px; }
+    .lede { font-size: 1.08rem; color: #657575; }
+
+    .problem { background: #f6f9f9; }
+    .cards-4 { display:grid; grid-template-columns: repeat(4,1fr); gap: 18px; }
+    .card {
+      background:#fff;
+      border:1px solid #e2e9e9;
+      border-radius: var(--radius-sm);
+      padding: 24px;
+      box-shadow: 0 8px 30px rgba(20,34,36,.04);
+    }
+    .num { color: var(--teal); font-weight:800; font-size:.85rem; letter-spacing:.08em; }
+    .card h3 { margin: 12px 0 8px; font-size: 1.1rem; }
+    .card p { color:#687777; margin:0; font-size:.95rem; }
+    .statement {
+      margin-top: 34px;
+      background: var(--ink);
+      color:#fff;
+      border-radius: 22px;
+      padding: 34px;
+      font-size: clamp(1.5rem, 3vw, 2.4rem);
+      font-weight: 800;
+      line-height: 1.15;
+    }
+    .statement span { color: var(--teal); }
+
+    .flow { display:grid; grid-template-columns: repeat(5,1fr); gap: 12px; align-items: stretch; }
+    .step {
+      border:1px solid #dce6e6;
+      border-radius: 16px;
+      padding: 20px;
+      background:#fff;
+      position:relative;
+    }
+    .step b { display:block; color:var(--teal-dark); font-size:.76rem; letter-spacing:.1em; margin-bottom:10px; }
+    .step h3 { margin:0 0 8px; font-size:1.02rem; }
+    .step p { margin:0; color:#6a7878; font-size:.9rem; }
+
+    .uae {
+      background: linear-gradient(135deg, #eaf7f5 0%, #f8fbfb 100%);
+    }
+    .uae-grid { display:grid; grid-template-columns: .95fr 1.05fr; gap: 44px; align-items:center; }
+    .timeline { display:grid; gap: 14px; }
+    .time-card {
+      display:grid; grid-template-columns: 120px 1fr; gap:20px;
+      padding: 18px; border:1px solid #cfe8e4; border-radius:16px; background:#fff;
+    }
+    .time-date { color:var(--teal-dark); font-weight:800; }
+    .time-card p { margin:0; color:#637373; }
+    .diagram {
+      background: #122123; color:#fff; border-radius:24px; padding:26px; box-shadow:var(--shadow);
+    }
+    .drow { display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; }
+    .box { padding:14px 16px; border:1px solid rgba(255,255,255,.14); border-radius:12px; background:#182a2c; font-weight:700; text-align:center; min-width:140px; }
+    .box.active { background:var(--teal); color:#06201d; border-color:transparent; }
+    .arrow { color:#6e8b8b; font-size:1.4rem; }
+    .diagram small { display:block; color:#90a4a4; margin-top:18px; text-align:center; }
+
+    .impact { background:#102022; color:#fff; }
+    .impact .section-head .lede { color:#b4c2c2; }
+    .metric-grid { display:grid; grid-template-columns: repeat(4,1fr); gap:16px; }
+    .metric { border:1px solid rgba(255,255,255,.11); border-radius:18px; padding:24px; background:rgba(255,255,255,.03); }
+    .metric strong { display:block; font-size:2.3rem; color:var(--teal); line-height:1; margin-bottom:10px; }
+    .metric span { color:#d8e2e2; }
+
+    .integrations-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:44px; align-items:center; }
+    .erp-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+    .erp { padding:22px; border:1px solid #dfe8e8; border-radius:14px; background:#f8fbfb; font-weight:800; text-align:center; }
+
+    .assessment { background:#eef8f6; }
+    .assessment-box { background:#fff; border:1px solid #d8e8e6; border-radius:28px; padding:42px; display:grid; grid-template-columns:1.1fr .9fr; gap:42px; align-items:center; box-shadow:0 14px 44px rgba(20,34,36,.06); }
+    .check-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+    .check { padding:18px; background:#f6fbfa; border:1px solid #deecea; border-radius:14px; font-weight:700; }
+
+    .final-cta { background:var(--teal); color:#08201e; text-align:center; }
+    .final-cta h2 { margin-inline:auto; max-width:800px; }
+    .final-cta p { max-width:700px; margin:0 auto 24px; font-size:1.08rem; }
+
+    footer { background:#0d1718; color:#9aabab; padding:36px 0; }
+    .footer-inner { display:flex; justify-content:space-between; gap:20px; align-items:center; flex-wrap:wrap; }
+    .footer-inner a { color:#d9e3e3; }
+
+    @media (max-width: 980px) {
+      .nav-links { display:none; }
+      .hero-grid, .uae-grid, .integrations-grid, .assessment-box { grid-template-columns:1fr; }
+      .cards-4, .metric-grid { grid-template-columns:repeat(2,1fr); }
+      .flow { grid-template-columns:repeat(2,1fr); }
+      .hero { padding-top:60px; }
+      .mock { transform:none; }
+    }
+    @media (max-width: 620px) {
+      .wrap { width:min(calc(100% - 24px), var(--max)); }
+      .nav-actions .uae-pill { display:none; }
+      .nav-actions .btn { padding:10px 12px; font-size:.85rem; }
+      h1 { font-size: 3rem; }
+      section { padding:66px 0; }
+      .cards-4, .metric-grid, .flow, .erp-grid, .check-grid { grid-template-columns:1fr; }
+      .time-card { grid-template-columns:1fr; gap:6px; }
+      .assessment-box { padding:26px; }
+      .stats { grid-template-columns:1fr 1fr; }
+      .row { grid-template-columns:1fr .7fr; }
+      .row > :nth-child(3) { display:none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="https://360-ap.com" aria-label="360 AP home">
+        <span class="brand-mark">360°</span>
+        <span>AP</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#how">How it works</a>
+        <a href="#uae">UAE e-Invoicing</a>
+        <a href="#impact">Business impact</a>
+        <a href="#assessment">Free assessment</a>
+      </nav>
+      <div class="nav-actions">
+        <span class="uae-pill">UAE</span>
+        <a class="btn btn-primary" href="mailto:sales@360-ap.com?subject=UAE%20Demo%20Request">Request a demo</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span>Built by AP practitioners</div>
+          <h1>Your invoices are becoming digital. <span class="accent">Is your reconciliation process?</span></h1>
+          <p class="hero-copy">Automate supplier statement reconciliation, identify missing invoices and credits, surface exceptions and give your AP team a clear view of every supplier account.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#assessment">Try a statement</a>
+            <a class="btn btn-ghost" href="mailto:sales@360-ap.com?subject=UAE%20Demo%20Request">Book a 20-minute demo</a>
+          </div>
+          <p class="micro">Supplier recons in hours, not days. Works alongside your existing ERP.</p>
+        </div>
+
+        <div class="mock" aria-label="Sample reconciliation dashboard">
+          <div class="mock-top">
+            <span class="mock-title">AP Accurate — Supplier Reconciliation</span>
+            <span class="mock-status">LIVE STATUS</span>
+          </div>
+          <div class="mock-body">
+            <div class="supplier">
+              <div><small>Supplier</small><strong>ABC Trading LLC</strong></div>
+              <div class="score">96.8% complete</div>
+            </div>
+            <div class="stats">
+              <div class="stat"><span>Matched</span><strong class="good">184</strong></div>
+              <div class="stat"><span>Missing invoices</span><strong class="warn">3</strong></div>
+              <div class="stat"><span>Missing credits</span><strong class="warn">2</strong></div>
+              <div class="stat"><span>Value discrepancy</span><strong class="bad">1</strong></div>
+            </div>
+            <div class="mock-table">
+              <div class="row head"><div>Document</div><div>Value</div><div>Status</div></div>
+              <div class="row"><div>INV-48291</div><div>AED 42,815</div><div class="tag">Matched</div></div>
+              <div class="row"><div>CR-12084</div><div>AED 7,420</div><div class="tag" style="background:#fff1de;color:#9a5a10">Missing</div></div>
+              <div class="row"><div>INV-48312</div><div>AED 18,990</div><div class="tag">Matched</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="logos-strip">
+      <div class="wrap logos-flex">
+        <strong>Built for complex AP environments</strong>
+        <span>SAP</span><span>Oracle NetSuite</span><span>Microsoft Dynamics 365</span><span>Coupa</span><span>Other ERP systems</span>
+      </div>
+    </div>
+
+    <section class="problem">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">The reality</div>
+          <h2>Still reconciling supplier statements manually?</h2>
+          <p class="lede">Month-end slows down when statements, ERP transactions, supplier emails and exception tracking all live in different places.</p>
+        </div>
+        <div class="cards-4">
+          <article class="card"><div class="num">01</div><h3>Statements everywhere</h3><p>PDFs, spreadsheets, emails and supplier portals create fragmented inputs.</p></article>
+          <article class="card"><div class="num">02</div><h3>Manual matching</h3><p>AP teams spend valuable time checking transactions line by line.</p></article>
+          <article class="card"><div class="num">03</div><h3>Missing transactions</h3><p>Invoices and credits are often discovered late in the month.</p></article>
+          <article class="card"><div class="num">04</div><h3>Supplier chasing</h3><p>Routine discrepancies turn into inbox volume and repeat follow-up.</p></article>
+        </div>
+        <div class="statement">360° AP does the heavy lifting. <span>Your AP team handles the exceptions.</span></div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">How it works</div>
+          <h2>From supplier statement to completed reconciliation.</h2>
+          <p class="lede">A dedicated reconciliation workflow around your existing finance environment.</p>
+        </div>
+        <div class="flow">
+          <div class="step"><b>STEP 01</b><h3>Capture</h3><p>Receive supplier statements in the formats your team already uses.</p></div>
+          <div class="step"><b>STEP 02</b><h3>Match</h3><p>Compare statement transactions against ERP and AP records.</p></div>
+          <div class="step"><b>STEP 03</b><h3>Identify</h3><p>Surface missing invoices, credits and other discrepancies.</p></div>
+          <div class="step"><b>STEP 04</b><h3>Resolve</h3><p>Focus the team on exceptions and supplier follow-up.</p></div>
+          <div class="step"><b>STEP 05</b><h3>Complete</h3><p>Keep a documented, audit-ready reconciliation trail.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="uae" id="uae">
+      <div class="wrap uae-grid">
+        <div>
+          <div class="kicker">UAE finance transformation</div>
+          <h2>e-Invoicing digitises the invoice. 360° AP helps automate the reconciliation.</h2>
+          <p class="lede">As UAE finance teams prepare for structured e-Invoicing, supplier statement reconciliation remains a separate AP control process. 360° AP is designed to work alongside the systems already handling your invoices and ERP data.</p>
+          <div class="timeline">
+            <div class="time-card"><div class="time-date">30 Oct 2026</div><p>Appointment deadline for an Accredited Service Provider for businesses above AED 50m annual revenue.</p></div>
+            <div class="time-card"><div class="time-date">1 Jan 2027</div><p>Mandatory UAE e-Invoicing implementation begins for that first group.</p></div>
+          </div>
+          <p class="micro" style="color:#6d7d7d">Source: UAE Ministry of Finance. 360° AP is not presented as an Accredited Service Provider.</p>
+        </div>
+        <div class="diagram">
+          <div class="drow">
+            <div class="box">UAE e-Invoicing<br><small>Invoice exchange</small></div>
+            <div class="arrow">→</div>
+            <div class="box">Your ERP<br><small>AP transactions</small></div>
+            <div class="arrow">→</div>
+            <div class="box active">360° AP<br><small style="color:#0c4c47">Reconciliation</small></div>
+            <div class="arrow">→</div>
+            <div class="box">Exceptions resolved</div>
+          </div>
+          <small>Different layers. One more automated AP process.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="impact" id="impact">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker" style="color:#8fe0d8">Business impact</div>
+          <h2>Give your AP team their month-end back.</h2>
+          <p class="lede">Reduce repetitive reconciliation work, increase visibility and keep a clearer record of what has been checked.</p>
+        </div>
+        <div class="metric-grid">
+          <div class="metric"><strong>Up to 80%</strong><span>less reconciliation time, depending on process and environment*</span></div>
+          <div class="metric"><strong>100%</strong><span>greater visibility of reconciliation progress</span></div>
+          <div class="metric"><strong>Fewer</strong><span>manual supplier queries and follow-up tasks</span></div>
+          <div class="metric"><strong>One</strong><span>documented reconciliation trail for every supplier</span></div>
+        </div>
+        <p class="micro">*Use the 80% claim only where it can be substantiated from your customer or process results.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap integrations-grid">
+        <div>
+          <div class="kicker">Integrations</div>
+          <h2>Keep your ERP. Automate what happens around it.</h2>
+          <p class="lede">360° AP is not an ERP replacement. It gives finance teams a dedicated supplier statement reconciliation process around their existing AP environment.</p>
+        </div>
+        <div class="erp-grid">
+          <div class="erp">SAP</div>
+          <div class="erp">Oracle NetSuite</div>
+          <div class="erp">Microsoft Dynamics 365</div>
+          <div class="erp">Coupa</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="assessment" id="assessment">
+      <div class="wrap">
+        <div class="assessment-box">
+          <div>
+            <div class="kicker">Free AP reconciliation assessment</div>
+            <h2>Don't take our word for it. Give us a supplier statement.</h2>
+            <p class="lede">Use a representative statement and let 360° AP show you the matching, missing items, discrepancies and actions before you discuss a wider rollout.</p>
+            <div class="hero-actions" style="margin-top:22px">
+              <a class="btn btn-primary" href="mailto:sales@360-ap.com?subject=UAE%20AP%20Reconciliation%20Assessment&body=Hi%20360-AP%2C%0A%0AI%27d%20like%20to%20discuss%20a%20UAE%20AP%20reconciliation%20assessment.%0A">Try 360° AP with a statement</a>
+              <a class="btn btn-dark" href="mailto:sales@360-ap.com?subject=UAE%20Demo%20Request">Book a demo</a>
+            </div>
+          </div>
+          <div class="check-grid">
+            <div class="check">✓ What matched</div>
+            <div class="check">⚠ What's missing</div>
+            <div class="check">↔ What's different</div>
+            <div class="check">→ What needs action</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="wrap">
+        <h2>How much time could 360° AP give back to your finance team?</h2>
+        <p>Supplier statement recons in hours, not days. Built by AP practitioners for teams that want less manual work and more control.</p>
+        <a class="btn btn-dark" href="mailto:sales@360-ap.com?subject=UAE%20Demo%20Request">Book a 20-minute UAE demo</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="brand"><span class="brand-mark">360°</span><span>AP</span></div>
+      <div>Automated Supplier Statement Reconciliation</div>
+      <div><a href="mailto:sales@360-ap.com">sales@360-ap.com</a> · <a href="https://360-ap.com">360-ap.com</a></div>
+    </div>
+  </footer>
+</body>
+</html>
