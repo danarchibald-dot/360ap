@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERX for accounts payable | 360° AP</title>
+  <meta name="description" content="Gartner says ERP must move from recording what happened to acting on what is happening. Here is what that shift looks like in accounts payable.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/cropped-AP_Favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/cropped-AP_Favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/cropped-AP_Favicon-180x180.png">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-P566L9TS');</script>
+  <!-- End Google Tag Manager -->
+  <style>
+    /* Blog Post Hero */
+    .blogpost-hero {
+      padding: 80px 48px 48px;
+      background: linear-gradient(180deg, rgba(45, 212, 191, 0.08) 0%, var(--bg-primary) 100%);
+      text-align: center;
+    }
+
+    .blogpost-hero-content {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .blogpost-hero .blog-card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .blogpost-hero .blog-card-category {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--accent-dark);
+      background: rgba(45, 212, 191, 0.1);
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+
+    .blogpost-hero .blog-card-date {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .blogpost-hero h1 {
+      font-size: clamp(32px, 4.5vw, 48px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.15;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+    }
+
+    .blogpost-hero .blogpost-excerpt {
+      font-size: 18px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    /* Blog Content */
+    .blogpost-content {
+      padding: 60px 48px 100px;
+      background: var(--bg-primary);
+    }
+
+    .blogpost-body {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .blogpost-body h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.5px;
+      line-height: 1.3;
+      margin: 48px 0 20px;
+    }
+
+    .blogpost-body h3 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.3px;
+      line-height: 1.3;
+      margin: 36px 0 16px;
+    }
+
+    .blogpost-body p {
+      font-size: 17px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .blogpost-body ul, .blogpost-body ol {
+      margin: 0 0 24px 24px;
+      padding: 0;
+    }
+
+    .blogpost-body li {
+      font-size: 17px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 8px;
+    }
+
+    .blogpost-body blockquote {
+      border-left: 3px solid var(--accent);
+      padding: 4px 0 4px 24px;
+      margin: 32px 0;
+    }
+
+    .blogpost-body blockquote p {
+      font-size: 18px;
+      font-style: italic;
+      color: var(--text-primary);
+      margin-bottom: 0;
+    }
+
+    /* Author / Back link */
+    .blogpost-footer {
+      max-width: 720px;
+      margin: 0 auto;
+      padding-top: 48px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .blogpost-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .blogpost-author-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0F2830 0%, #134E4A 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .blogpost-author-info span {
+      display: block;
+    }
+
+    .blogpost-author-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .blogpost-author-role {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .blogpost-back {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent-dark);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .blogpost-back:hover {
+      text-decoration: underline;
+    }
+
+    /* CTA Section */
+    .blogpost-cta {
+      padding: 80px 48px;
+      background: var(--bg-secondary);
+      text-align: center;
+    }
+
+    .blogpost-cta-box {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 56px 48px;
+      background: linear-gradient(135deg, #0F2830 0%, #134E4A 100%);
+      border-radius: 16px;
+    }
+
+    .blogpost-cta-box h2 {
+      font-size: clamp(28px, 3.5vw, 36px);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -1px;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .blogpost-cta-box p {
+      font-size: 17px;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .blogpost-cta-box .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .blogpost-hero {
+        padding: 60px 24px 36px;
+      }
+
+      .blogpost-image {
+        padding: 0 24px;
+      }
+
+      .blogpost-image-inner {
+        height: 240px;
+      }
+
+      .blogpost-content {
+        padding: 48px 24px 80px;
+      }
+
+      .blogpost-body h2 {
+        font-size: 24px;
+        margin-top: 36px;
+      }
+
+      .blogpost-footer {
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+      }
+
+      .blogpost-cta {
+        padding: 60px 24px;
+      }
+
+      .blogpost-cta-box {
+        padding: 40px 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P566L9TS"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"360° AP","alternateName":"360 AP","url":"https://360-ap.com","logo":"https://360-ap.com/images/logos/360ap-logo-dark.svg","sameAs":["https://www.linkedin.com/company/360%C2%B0-ap/"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://360-ap.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://360-ap.com/blog"},{"@type":"ListItem","position":3,"name":"What is Accounts Payable?","item":"https://360-ap.com/blog-what-is-accounts-payable"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"What is Accounts Payable? A Simple Guide to the Fundamentals","description":"What is accounts payable? Learn the fundamentals of AP, why it matters for cash flow, common challenges, and how AI is transforming the process in 2026.","url":"https://360-ap.com/blog-what-is-accounts-payable","datePublished":"2026-03-01","dateModified":"2026-03-01","author":{"@type":"Organization","name":"360° AP","url":"https://360-ap.com"},"publisher":{"@type":"Organization","name":"360° AP","url":"https://360-ap.com","logo":{"@type":"ImageObject","url":"https://360-ap.com/images/logos/360ap-logo-dark.svg"}},"isPartOf":{"@type":"WebSite","url":"https://360-ap.com"}}
+</script>
+
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="logo">
+        <img src="images/logos/360ap-logo-dark.svg" alt="360° AP">
+      </a>
+      <div class="nav-links">
+        <div class="nav-dropdown">
+          <a href="solutions.html">Solutions
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="solutions.html">Solutions Overview</a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="ap-assure.html">
+              <img src="images/logos/ap-assured-logo-main.svg" alt=""> AP Assure
+            </a>
+            <a href="ap-accurate.html">
+              <img src="images/logos/ap-accurate-logo-main.svg" alt=""> AP Accurate
+            </a>
+            <a href="ap-automate.html">
+              <img src="images/logos/ap-automated-logo-main.svg" alt=""> AP Automate
+            </a>
+            <a href="ap-assist.html">
+              <img src="images/logos/ap-assist-logo-main.svg" alt=""> AP Assist
+            </a>
+            <a href="ap-analyze.html">
+              <img src="images/logos/ap-analyse-logo-main.svg" alt=""> AP Analyze
+            </a>
+          </div>
+        </div>
+        <a href="pricing.html">Pricing</a>
+        <a href="integrations.html">Integrations</a>
+        <a href="about.html">About Us</a>
+        <div class="nav-dropdown">
+          <a href="#">Resources
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="blog.html">Blog</a>
+            <a href="videos.html">Videos</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <a href="demo.html" class="btn-primary">Request a Demo</a>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Menu" onclick="document.querySelector('.mobile-menu').classList.toggle('active'); this.classList.toggle('active');">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="solutions.html">Solutions</a>
+    <a href="ap-assure.html" class="mobile-sub">AP Assure</a>
+    <a href="ap-accurate.html" class="mobile-sub">AP Accurate</a>
+    <a href="ap-automate.html" class="mobile-sub">AP Automate</a>
+    <a href="ap-assist.html" class="mobile-sub">AP Assist</a>
+    <a href="ap-analyze.html" class="mobile-sub">AP Analyze</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="integrations.html">Integrations</a>
+    <a href="about.html">About Us</a>
+    <a href="blog.html">Resources</a>
+    <a href="blog.html" class="mobile-sub">Blog</a>
+    <a href="videos.html" class="mobile-sub">Videos</a>
+    <a href="demo.html" class="btn-primary">Request a Demo</a>
+  </div>
+
+  <!-- Hero -->
+
+
+  <!-- Blog Content -->
+  <article style="max-width:760px;margin:0 auto;padding:24px 16px 40px;font-family:Calibri,'Segoe UI',Arial,sans-serif;color:#1d2a2c;font-size:18px;line-height:1.65;">
+  <p style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#2BC4A3;font-weight:700;margin:0 0 8px;">Accounts payable · Point of view</p>
+  <h1 style="font-size:36px;line-height:1.15;color:#05383C;margin:0 0 18px;">From system of record to system of execution: what ERX means for accounts payable</h1>
+
+  <p>Gartner has put a name to something AP teams have lived with for years. In its piece <a href="https://gtnr.it/4z811e6" style="color:#05383C;font-weight:600;" target="_blank" rel="noopener">ERX: the next generation of intelligent and autonomous ERP</a>, it describes traditional ERP as a passive system of record, built to track past events. The next generation, which Gartner calls enterprise resource execution (ERX), acts on what is happening now.</p>
+
+  <p>In accounts payable that distinction hits home. Your ERP knows every invoice you posted and every payment you made. It has no idea whether your supplier agrees with the balance, whether the same invoice came in twice under a slightly different number, or who is chasing the credit note that never arrived.</p>
+
+  <!-- IMAGE: 360AP_ERX_graphic.png -->
+
+  <h2 style="font-size:24px;color:#05383C;margin:34px 0 10px;">AP has always run on the gap</h2>
+  <p>The ERP records the transaction. Everything around it has been done by people: requesting statements, ticking lines in spreadsheets, spotting duplicates, chasing suppliers for missing documents. Most of it happens under month-end pressure, and only for a sample of suppliers.</p>
+  <p>We spent years in recovery audit before building 360° AP. That work taught us where the gap costs money. Duplicates and missed credits are rarely hidden. They sit in the data, recorded perfectly. Recording was the job the system was given.</p>
+
+  <h2 style="font-size:24px;color:#05383C;margin:34px 0 10px;">What execution looks like in AP</h2>
+  <p>360° AP sits on top of the ERP you already run and works on the same data. Each of the three core modules picks up a job the ERP was never built for.</p>
+
+  <h3 style="font-size:19px;color:#05383C;margin:24px 0 6px;">Supplier statements: AP Accurate</h3>
+  <p>Statements are requested, read, matched against the ledger and chased automatically. Every supplier in scope gets done, where a team working by hand gets through a handful. The recon is how you know every invoice and credit note reached your books. When one hasn't, it shows you which. Every action is routed and every step is logged. Suppliers still send the missing documents and your team still corrects the errors the match finds, but nobody has to remember to ask. We call these autonomous recons.</p>
+
+  <h3 style="font-size:19px;color:#05383C;margin:24px 0 6px;">Duplicates and errors: AP Assure, with AP Accurate</h3>
+  <p>AP Assure checks every processed document for duplicates at the end of each day and reports the suspects the next morning. Level 1 looks for the same supplier, invoice number, date and amount. Level 2 flags where three of those four match, and Level 3 where two match. The invoice images are compared side by side, which clears the false duplicates caused by capture errors, and a reviewer claims or drops each one. Because it runs every day, a duplicate lands on your team's desk before the payment run it would have gone out in. The statement recon picks up the other errors, such as a wrong amount or date, or a credit the supplier issued that never reached the ledger.</p>
+
+  <h3 style="font-size:19px;color:#05383C;margin:24px 0 6px;">Invoice processing: AP Automate</h3>
+  <p>AP Automate extracts and validates each invoice and credit note, then passes it to the ERP. Where the ERP, or a matching tool you already use, handles in-flight matching, AP Automate hands over to it. Where nothing does, it tries the match itself and posts. If it can't, the document comes in as a draft for your team to match.</p>
+
+  <h3 style="font-size:19px;color:#05383C;margin:24px 0 6px;">One view of what to act on</h3>
+  <p>The three modules share one data layer. The extraction that feeds statement reconciliation also feeds duplicate detection, so what one module learns about a supplier is already there for the next. On top sits a single 360° view of what needs action today, and the tools to work each response through.</p>
+
+  <h2 style="font-size:24px;color:#05383C;margin:34px 0 10px;">Execution still needs judgement</h2>
+  <p>Execution moves people off the routine work and onto the decisions that need a person. Is this flagged invoice really a duplicate? Should that old GRNI balance be reversed? The system does the checking and the chasing. Your team makes the call, and every call is recorded.</p>
+
+  <h2 style="font-size:24px;color:#05383C;margin:34px 0 10px;">No rip and replace</h2>
+  <p>The move from ERP to ERX will take most organisations years. Nobody is replacing their ERP to fix accounts payable, and they don't need to. 360° AP connects to the platforms AP teams already use, including SAP and Coupa, and works alongside them. Your ERP stays the system of record. 360° AP adds the execution on top.</p>
+
+  <div style="background:#05383C;color:#ffffff;border-radius:10px;padding:22px 24px;margin:36px 0 0;">
+    <p style="margin:0 0 6px;font-size:20px;font-weight:700;">See what execution looks like on your own data</p>
+    <p style="margin:0 0 14px;color:#cfe7e1;">Start with a demo, then a proof of concept on your own statements and invoices, so the gaps you see are your own.</p>
+    <a href="https://360-ap.com/demo" style="display:inline-block;background:#2BC4A3;color:#05383C;font-weight:700;text-decoration:none;padding:10px 18px;border-radius:6px;">Book a demo</a>
+  </div>
+
+  <p style="font-size:13px;color:#6b7a7c;margin-top:26px;">Reference: Gartner, "ERX: the next generation of intelligent and autonomous ERP", 2026, <a href="https://gtnr.it/4z811e6" style="color:#6b7a7c;">gtnr.it/4z811e6</a>. Gartner is a registered trademark of Gartner, Inc. Gartner does not endorse any vendor, product or service.</p>
+</article>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logos/360ap-logo-white.svg" alt="360° AP">
+          <p>One platform for your entire AP lifecycle. Built by AP practitioners who spent 15 years wishing it existed.</p>
+          <div class="footer-social" style="margin-top: 16px;">
+            <a href="https://www.linkedin.com/company/360%C2%B0-ap/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); transition: all 0.2s;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <a href="solutions.html">Solutions Overview</a>
+          <a href="ap-assure.html">AP Assure</a>
+          <a href="ap-accurate.html">AP Accurate</a>
+          <a href="ap-automate.html">AP Automate</a>
+          <a href="ap-assist.html">AP Assist</a>
+          <a href="ap-analyze.html">AP Analyze</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="integrations.html">Integrations</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Contact</h4>
+          <a href="contact.html">Contact Us</a>
+          <p><a href="mailto:sales@360-ap.com">sales@360-ap.com</a></p>
+          
+          <a href="demo.html" class="btn-primary" style="margin-top: 16px;">Request a Demo</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 360° AP (Pty) Ltd. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="privacy.html#cookies">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
